@@ -13,12 +13,49 @@ return {
 			},
 		},
 		tags = { "script mod", "indonesia" },
+		params = {
+			{
+				key = "historical_tram_electrification",
+				name = _("param_historical_tram"),
+				tooltip = _("tooltip_historical_tram"),
+				values = { _("param_val_default"), _("param_val_historical_tram") },
+				defaultIndex = 1,
+			},
+			{
+				key = "historical_track_electrification",
+				name = _("param_historical_track"),
+				tooltip = _("tooltip_historical_track"),
+				values = { _("param_val_default"), _("param_val_historical_track") },
+				defaultIndex = 1,
+			},
+			{
+				key = "historical_bus_line",
+				name = _("param_historical_bus"),
+				tooltip = _("tooltip_historical_bus"),
+				values = { _("param_val_default"), _("param_val_historical_bus") },
+				defaultIndex = 1,
+			},
+		},
 		visible = true,
 	},
 	options = {
 	},
 	runFn = function (settings, modParams)
-		-- Initialization logic here
+		game.config.earnAchievementsWithMods = true
+		game.config.industryButton = true
+
+		local params = modParams[getCurrentModId()]
+		if params then
+			if params.historical_tram_electrification == 1 then
+				game.config.tramCatenaryYearFrom = 1899
+			end
+			if params.historical_track_electrification == 1 then
+				game.config.trackCatenaryYearFrom = 1925
+			end
+			if params.historical_bus_line == 1 then
+				game.config.busLaneYearFrom = 2004
+			end
+		end
 	end,
 	postRunFn = function (settings, modParams)
 		-- Post-initialization logic here
