@@ -1,0 +1,64 @@
+LIST BUS (BUSES) TRANSPORT FEVER 2 VS SEJARAH INDONESIA
+======================================================
+
+Daftar ini mencocokkan bus di base game TpF2 dengan armada bus yang 
+pernah beroperasi di Indonesia (Era Kolonial, DAMRI, PO, hingga modern).
+
+--- ERA BUS AWAL (1900 - 1945) ---
+
+1. TpF2: Landauer (1891)
+   Indonesia: Bus KNILM / PDA Auto Tram
+   Ket: Mewakili bus komersial awal yang digunakan di kota-kota besar 
+        Hindia Belanda seperti Batavia dan Bandung.
+
+2. TpF2: Dux Hotel Bus (1902)
+   Indonesia: Bus Hotel / Perkebunan
+   Ket: Menggambarkan bus yang digunakan untuk melayani hotel mewah atau 
+        karyawan di perkebunan besar.
+
+3. TpF2: Gaggenau C40 (1909)
+   Indonesia: Bus Kota KNILM / DAMRI Awal
+   Ket: Bus yang mirip dengan bus kota yang dioperasikan KNILM atau 
+        cikal bakal DAMRI pada era sebelum kemerdekaan.
+
+--- ERA PASCA-KEMERDEKAAN & DAMRI (1945 - 1980) ---
+
+4. TpF2: ABOAG RK (1922)
+   Indonesia: Bus Perintis / Bus DAMRI Awal
+   Ket: Mewakili bus-bus yang digunakan DAMRI untuk membuka rute-rute 
+        baru pasca kemerdekaan.
+
+5. TpF2: Saurer 2 BOD-P (1940)
+   Indonesia: Bus Antarkota Jarak Pendek
+   Ket: Bus bermesin depan yang umum digunakan untuk rute antarkota pendek 
+        atau pedesaan.
+
+6. TpF2: Mercedes-Benz O 317 (1958)
+   Indonesia: Bus Mercedes-Benz Era Orde Lama
+   Ket: Mirip dengan bus Mercedes-Benz yang menjadi primadona bus antarkota 
+        dan bus kota di era 1960-an hingga 1970-an.
+
+--- ERA MODERN (1980 - 2000++) ---
+
+7. TpF2: Ikarus 280 (1973)
+   Indonesia: Bus Gandeng (Articulated Bus) TransJakarta (Awal)
+   Ket: Mewakili bus gandeng pertama yang dioperasikan TransJakarta.
+
+8. TpF2: Berkhof Duvedec (1994)
+   Indonesia: Bus Pariwisata / Bus Eksekutif PO
+   Ket: Bus modern dengan kenyamanan lebih yang digunakan oleh PO untuk 
+        rute jarak jauh atau pariwisata.
+
+9. TpF2: Volvo 5000 / MAZ 103 (1997)
+   Indonesia: Bus Kota / TransJakarta Modern
+   Ket: Mewakili bus-bus kota low-entry atau bus TransJakarta generasi 
+        terbaru (misal: Volvo B11R).
+
+10. TpF2: Wright StreetCar (2006)
+    Indonesia: Bus Tingkat TransJakarta / BRT Modern
+    Ket: Mewakili bus dengan desain modern dan kapasitas besar untuk 
+         sistem BRT.
+
+---
+Dibuat oleh: tomylana93
+Mod: Indonesia Fever

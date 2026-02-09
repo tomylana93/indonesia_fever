@@ -1,0 +1,50 @@
+LIST TRUK (TRUCKS) TRANSPORT FEVER 2 VS SEJARAH INDONESIA
+========================================================
+
+Daftar ini mencocokkan truk di base game TpF2 dengan armada truk yang 
+pernah beroperasi di Indonesia (Era Kolonial, Orde Lama, hingga Modern).
+
+--- ERA TRUK AWAL (1900 - 1945) ---
+
+1. TpF2: Benz Truck w/ Side Stakes (1912)
+   Indonesia: Truk Angkut KNIL / Perkebunan (Awal)
+   Ket: Mewakili truk-truk awal Benz atau sejenisnya yang digunakan oleh militer 
+        kolonial atau perkebunan untuk mengangkut hasil bumi.
+
+2. TpF2: Steam Flatbed Truck (1894)
+   Indonesia: Truk Uap Pengangkut Logistik
+   Ket: Menggambarkan era transisi dari kereta kuda ke kendaraan bermotor, 
+        cocok untuk angkutan berat jarak pendek.
+
+3. TpF2: Mack AC Flatbed Truck (1916)
+   Indonesia: Truk Mack / Chevrolet Era Kolonial
+   Ket: Truk-truk buatan Amerika yang mulai masuk pada akhir era kolonial 
+        dan digunakan untuk logistik militer atau pembangunan infrastruktur.
+
+--- ERA PASCA-KEMERDEKAAN (1945 - 1980) ---
+
+4. TpF2: AMO F15 Tank Truck (1924)
+   Indonesia: Truk Tangki BBM Awal (Pertamina / KNIL)
+   Ket: Mewakili truk tangki yang digunakan untuk distribusi BBM pasca-kemerdekaan.
+
+5. TpF2: Chevrolet C60 (1976)
+   Indonesia: Truk Chevrolet / Ford Era Orde Lama
+   Ket: Truk-truk klasik Amerika yang banyak digunakan sebagai angkutan umum atau 
+        barang di era Orde Lama.
+
+6. TpF2: Benz Tarpaulin Truck (1912) - (Note: ini model lama, tapi bisa jadi proxy)
+   Indonesia: Truk Mercedes-Benz 911 "Bagong" (1971)
+   Ket: Meskipun modelnya lebih tua di TpF2, truk Benz berpenutup terpal dapat 
+        menjadi proksi visual untuk truk "Mercy Bagong" yang legendaris di Indonesia, 
+        terutama versi flatbed/tarpaulin.
+
+--- ERA MODERN (1980 - 2000++) ---
+
+7. TpF2: Modern European Truck / Modern American Truck (General)
+   Indonesia: Truk Hino Ranger / Isuzu Giga / Fuso Fighter / Volvo
+   Ket: TpF2 memiliki beberapa truk modern generik yang bisa mewakili armada truk 
+        medium hingga heavy-duty yang mendominasi jalanan Indonesia saat ini.
+
+---
+Dibuat oleh: tomylana93
+Mod: Indonesia Fever

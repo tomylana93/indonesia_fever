@@ -1,0 +1,57 @@
+LIST KAPAL (SHIPS) TRANSPORT FEVER 2 VS SEJARAH INDONESIA
+=========================================================
+
+Daftar ini mencocokkan kapal di base game TpF2 dengan armada pelayaran yang 
+pernah beroperasi di nusantara (Era KPM, PELNI, hingga modern).
+
+--- ERA KAPAL UAP & KOLONIAL (KPM) 1891 - 1950 ---
+
+1. TpF2: Rigi (1850)
+   Indonesia: Kapal Uap Kayu Antarpulau Awal
+   Ket: Mewakili kapal-kapal kecil yang melayani rute pendek di sekitar Jawa 
+        dan Sumatera pada pertengahan abad 19.
+
+2. TpF2: Wilhelm I (1850)
+   Indonesia: Kapal Paket KPM (Paddlesteamer)
+   Ket: Mirip dengan kapal paket awal KPM (Koninklijke Paketvaart-Maatschappij) 
+        sebelum beralih sepenuhnya ke baling-baling (propeller).
+
+3. TpF2: Zoroaster (1850)
+   Indonesia: Kapal Tanker Minyak Stanvac / Shell
+   Ket: Digunakan untuk merepresentasikan pengangkutan minyak bumi awal dari 
+        Pangkalan Brandan atau Palembang.
+
+4. TpF2: Dunara Castle (1875)
+   Indonesia: Kapal Penumpang/Barang KPM (Mainliner)
+   Ket: Kapal besi yang sangat mirip dengan armada utama KPM yang melayani 
+        jalur "Sabang sampai Merauke".
+
+5. TpF2: Frontenac (1885)
+   Indonesia: Kapal Pesiar / Kapal Gubernur Jenderal
+   Ket: Digunakan untuk merepresentasikan kapal penumpang mewah atau kapal dinas pemerintah.
+
+--- ERA TRANSISI & MODERN (PELNI) 1952 - 2000++ ---
+
+6. TpF2: Schaffhausen (1913)
+   Indonesia: Kapal Motor (KM) PELNI Awal
+   Ket: Mewakili kapal-kapal hasil nasionalisasi KPM yang menjadi tulang punggung PELNI.
+
+7. TpF2: Zürich (1935)
+   Indonesia: Kapal Perintis / Kapal Barang PELNI
+   Ket: Memiliki profil yang mirip dengan kapal kargo umum (General Cargo) di Indonesia.
+
+8. TpF2: Hovercraft SR.N6 (1970)
+   Indonesia: Kapal Cepat / Jetfoil (Era Habibie)
+   Ket: Representasi jetfoil yang pernah populer melayani rute Jakarta - Merak atau Jakarta - Lampung.
+
+9. TpF2: Modern Container Ship
+   Indonesia: Kapal Peti Kemas (Tol Laut)
+   Ket: Standar kapal kontainer modern yang melayani jalur logistik nasional saat ini.
+
+10. TpF2: Modern Tanker
+    Indonesia: Kapal Tanker Pertamina (Seri MT)
+    Ket: Mewakili kapal tanker besar pengangkut BBM ke seluruh depo di Indonesia.
+
+---
+Dibuat oleh: tomylana93
+Mod: Indonesia Fever

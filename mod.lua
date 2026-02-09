@@ -56,6 +56,12 @@ return {
 				game.config.busLaneYearFrom = 2004
 			end
 		end
+
+		-- Load vehicle filter script
+		local vehicleFilter = require "vehicle_filter"
+		if vehicleFilter and vehicleFilter.data then
+			vehicleFilter.data().runFn(settings, modParams)
+		end
 	end,
 	postRunFn = function (settings, modParams)
 		-- Post-initialization logic here

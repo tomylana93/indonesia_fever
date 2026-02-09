@@ -1,0 +1,48 @@
+LIST TRAM (TRAMS) TRANSPORT FEVER 2 VS SEJARAH INDONESIA
+======================================================
+
+Daftar ini mencocokkan trem bermotor di base game TpF2 dengan armada trem 
+yang pernah beroperasi di Indonesia (Era Batavia, Surabaya, Medan).
+
+--- ERA TRAM LISTRIK AWAL (1899 - 1950) ---
+
+1. TpF2: St. Petersburg Streetcar (1863)
+   Indonesia: Trem Listrik BETM (Batavia)
+   Ket: Meskipun tahunnya lebih awal di TpF2, bentuk gerbong tunggal ini 
+        mirip dengan trem listrik awal di Jakarta.
+
+2. TpF2: Stadtbahn Halle (1887)
+   Indonesia: Trem Listrik OJS (Surabaya) / Trem Medan
+   Ket: Representasi yang baik untuk trem listrik jalur utama di Surabaya dan Medan 
+        pada awal abad ke-20.
+
+3. TpF2: San Diego Electric Trolley (1893)
+   Indonesia: Trem Listrik Batavia (2-axle / 4-axle)
+   Ket: Trem jenis trolley dengan tiang tunggal yang umum dioperasikan.
+
+4. TpF2: Ce 2/2 SchSt (1901)
+   Indonesia: Trem Listrik Modern Batavia/Surabaya (Pra-1960)
+   Ket: Trem listrik bergandar dua (2-axle) yang sering diupgrade atau 
+        dipesan di awal abad 20.
+
+5. TpF2: Peter Witt Streetcar (1917)
+   Indonesia: Trem Listrik Surabaya / Jakarta (Pasca-1920)
+   Ket: Trem yang lebih panjang dengan desain pintu di tengah, mewakili 
+        trem dengan kapasitas lebih besar.
+
+--- ERA TRAM MODERN (1960 - 2000++) ---
+
+6. TpF2: Be 4/6 Mirage (1965)
+   Indonesia: LRT / MRT (Proksi Modern)
+   Ket: Trem ini memiliki tampilan modern yang bisa menjadi proksi 
+        untuk sistem Light Rail Transit (LRT) atau Mass Rapid Transit (MRT) 
+        yang sedang berkembang di Indonesia.
+
+7. TpF2: Be 5/6 Cobra (2001)
+   Indonesia: LRT / MRT (Proksi Modern)
+   Ket: Trem modern dengan lantai rendah (low-floor) dan desain ramping, 
+        sangat cocok sebagai proksi LRT/MRT urban.
+
+---
+Dibuat oleh: tomylana93
+Mod: Indonesia Fever

@@ -1,0 +1,57 @@
+LIST GERBONG BARANG (WAGONS) TRANSPORT FEVER 2 VS SEJARAH INDONESIA
+=====================================================================
+
+Daftar ini mencocokkan gerbong barang (freight) di base game TpF2 dengan gerbong 
+yang digunakan oleh NISM, SS, PNKA, hingga PT KAI.
+
+--- ERA UAP (1867 - 1950) ---
+
+1. TpF2: European Open Wagon (1850)
+   Indonesia: Gerbong Terbuka (Low-side Gondola)
+   Ket: Sangat mirip dengan gerbong kayu awal untuk angkut batu bara atau material konstruksi.
+
+2. TpF2: European Goods Wagon (1850)
+   Indonesia: Gerbong Tertutup (Boxcar) GW / GR
+   Ket: Gerbong kayu tertutup dua gandar (2-axle) yang menjadi standar angkutan barang umum.
+
+3. TpF2: European Stake Car (1850)
+   Indonesia: Gerbong Datar (Flatcar)
+   Ket: Digunakan untuk angkut kayu gelondongan atau pipa.
+
+4. TpF2: European Tank Wagon (1850)
+   Indonesia: Gerbong Ketel (Tanker) Dua Gandar
+   Ket: Versi awal untuk angkutan minyak tanah atau tetes tebu.
+
+--- ERA TRANSISI & DIESEL (1950 - 1990) ---
+
+5. TpF2: Verbandswagen (1910)
+   Indonesia: Gerbong Boxcar Baja (Series GG)
+   Ket: Evolusi dari gerbong kayu ke baja. Memiliki profil yang mirip dengan gerbong 
+        "GG" yang sangat umum di Jawa era 70an.
+
+6. TpF2: European Tank Wagon v.2 (1910)
+   Indonesia: Gerbong Ketel Pertamina (2-axle / 4-axle)
+   Ket: Memiliki bentuk kubah tangki yang serupa dengan standar lama Pertamina.
+
+7. TpF2: American Boxcar (1900)
+   Indonesia: Gerbong Tertutup Besar (4-axle)
+   Ket: Digunakan sebagai proksi untuk gerbong barang 4 gandar (bogie) yang lebih modern.
+
+--- ERA MODERN (1990 - 2000++) ---
+
+8. TpF2: European Goods Wagon Hbi (1970)
+   Indonesia: Gerbong Bagasi/Cargo PT KAI (B series)
+   Ket: Memiliki sliding door samping yang mirip dengan gerbong cargo modern Indonesia.
+
+9. TpF2: European Open Wagon v.3 (1978)
+   Indonesia: Gerbong Batubara Babaranjang (GB)
+   Ket: Meskipun Babaranjang menggunakan desain rotary coupler, secara visual 
+        ini adalah proksi terbaik untuk angkutan batu bara masif di Sumatera.
+
+10. TpF2: European Tank Wagon v.3 (1950)
+    Indonesia: Gerbong Ketel Modern KKW
+    Ket: Standar gerbong tangki bogie modern untuk angkutan BBM.
+
+---
+Dibuat oleh: tomylana93
+Mod: Indonesia Fever

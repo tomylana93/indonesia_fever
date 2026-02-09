@@ -1,0 +1,60 @@
+LIST PESAWAT (PLANES) TRANSPORT FEVER 2 VS SEJARAH INDONESIA
+===========================================================
+
+Daftar ini mencocokkan pesawat di base game TpF2 dengan armada penerbangan 
+yang pernah beroperasi di Indonesia (Era KNILM, Garuda, Merpati, hingga PTDI).
+
+--- ERA PENERBANGAN AWAL (KNILM) 1920 - 1950 ---
+
+1. TpF2: Junkers F 13 (1920)
+   Indonesia: Pesawat Perintis KNILM Awal
+   Ket: Mewakili pesawat-pesawat kecil yang membuka rute udara pertama di 
+        Hindia Belanda (Batavia, Bandung, Semarang).
+
+2. TpF2: Dornier Merkur (1925)
+   Indonesia: Pesawat Penumpang KNILM
+   Ket: Digunakan untuk rute domestik awal yang menghubungkan kota-kota besar di Jawa.
+
+3. TpF2: Douglas DC-3 (1935)
+   Indonesia: RI-001 Seulawah / Garuda Indonesia DC-3
+   Ket: Pesawat paling legendaris dalam sejarah Indonesia. Seulawah adalah 
+        pesawat pertama RI hasil sumbangan rakyat Aceh.
+
+--- ERA KEEMASAN PISTON & JET AWAL (GARUDA) 1950 - 1980 ---
+
+4. TpF2: Douglas DC-4 (1944)
+   Indonesia: Douglas DC-4 Garuda Indonesia
+   Ket: Digunakan untuk rute internasional awal dan penerbangan haji perdana.
+
+5. TpF2: Lockheed Super Constellation (1952)
+   Indonesia: Lockheed L-1049 Super Constellation
+   Ket: Salah satu pesawat paling ikonik yang pernah dioperasikan Garuda 
+        untuk rute jarak jauh ke Eropa dan Australia.
+
+6. TpF2: Junkers Ju-52
+   Indonesia: Pesawat Transport / Drop Zone
+   Ket: Digunakan sebagai proksi pesawat angkut militer atau logistik awal.
+
+--- ERA JET & TURBOPROP MODERN 1980 - 2000++ ---
+
+7. TpF2: Boeing 737-100 (1967)
+   Indonesia: Boeing 737-200 Garuda / Merpati
+   Ket: Tulang punggung penerbangan domestik Indonesia selama puluhan tahun.
+
+8. TpF2: Boeing 737-700 / Airbus A320
+   Indonesia: Garuda Indonesia / Citilink / Lion Air (Modern Era)
+   Ket: Standar pesawat jet lorong tunggal (narrow-body) yang digunakan saat ini.
+
+9. TpF2: de Havilland DHC-8 Q400
+   Indonesia: N250 Gatotkaca / N219 Nurtanio (PTDI)
+   Ket: Proksi terbaik untuk merepresentasikan pesawat turboprop buatan 
+        dalam negeri (IPTN/PTDI).
+
+10. TpF2: Lockheed C-130 Hercules
+    Indonesia: C-130 Hercules TNI AU
+    Ket: Digunakan untuk merepresentasikan angkutan logistik militer atau 
+         bantuan kemanusiaan ke daerah terpencil.
+
+---
+Dibuat oleh: tomylana93
+Mod: Indonesia Fever

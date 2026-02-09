@@ -1,0 +1,77 @@
+LIST LOKOMOTIF TRANSPORT FEVER 2 (BASE GAME) VS SEJARAH INDONESIA
+====================================================================
+
+Daftar ini mencocokkan lokomotif yang ada di base game Transport Fever 2 dengan 
+lokomotif yang secara visual atau teknis mirip dengan sejarah perkeretaapian di Indonesia.
+
+--- ERA UAP (STEAM ERA) 1867 - 1950 ---
+
+1. TpF2: Borsig (1862)
+   Indonesia: Seri B (Borsig/Hartmann)
+   Ket: Sangat mirip dengan lokomotif awal NISM (Nederlandsch-Indische Spoorweg Maatschappij)
+        untuk jalur Semarang-Solo-Yogyakarta.
+
+2. TpF2: BR 89 preuss. T 3 (1882)
+   Indonesia: Seri C 11 / C 12
+   Ket: Lokomotif langsir atau jalur cabang yang sangat umum di Jawa pada akhir abad 19.
+
+3. TpF2: BR 53 preuss. G 3 (1875)
+   Indonesia: Seri C 27 / C 28
+   Ket: Kemiripan pada konfigurasi roda dan bentuk boiler khas Eropa (Prusia/Jerman).
+
+4. TpF2: 2-8-0 Baldwin Class 56 (1871)
+   Indonesia: Seri D 50 / D 51
+   Ket: Representasi lokomotif barang berat buatan Amerika (Baldwin) yang pernah dipesan Indonesia.
+
+5. TpF2: 2-6-2 Mikado (1916)
+   Indonesia: Seri C 28 / D 52
+   Ket: Meskipun D 52 (Krupp) adalah 2-10-0, Mikado Amerika ini memiliki aura "Mainline Steam"
+        yang kuat untuk kereta ekspres jarak jauh di Jawa (Era 1920-1950an).
+
+--- ERA TRANSISI & LISTRIK AWAL 1925 - 1960 ---
+
+6. TpF2: MILW-Class EP-2 "Bi-Polar" (1919)
+   Indonesia: ESS 3201 "Bon-Bon" (1925)
+   Ket: Meskipun bentuknya berbeda, ini adalah representasi terbaik untuk lokomotif listrik
+        jalur Tanjung Priok - Jatinegara di era kolonial.
+
+7. TpF2: M-300 "Doodlebug" (1924)
+   Indonesia: Railcar uap/diesel awal
+   Ket: Mirip dengan konsep trem otonom atau railbus yang digunakan di jalur-jalur kecil Jawa/Sumatera.
+
+--- ERA DIESEL 1953 - 1990 ---
+
+8. TpF2: ALCO PA (1946)
+   Indonesia: CC 200 (GE-ALCO, 1953)
+   Ket: Lokomotif diesel elektrik pertama Indonesia. ALCO PA memiliki moncong "nose"
+        yang memberikan kesan yang sama dengan CC 200 yang legendaris.
+
+9. TpF2: EMD GP9 (1958)
+   Indonesia: Seri BB 200 / BB 201 (EMD G8/G12)
+   Ket: Standar lokomotif diesel elektrik EMD yang menjadi tulang punggung PNKA/PJKA 
+        sebelum era GE CC 201.
+
+10. TpF2: V 160 "Lollo" (1960)
+    Indonesia: Seri BB 301 / BB 304 (Krupp/Henschel)
+    Ket: Lokomotif diesel hidrolik buatan Jerman yang sangat identik secara visual
+         dan suara dengan armada Jerman yang mendominasi Indonesia era 60-80an.
+
+--- ERA MODERN 1990 - 2000++ ---
+
+11. TpF2: SD40-2 (1972)
+    Indonesia: Seri CC 202 (EMD G26, 1986)
+    Ket: Lokomotif berat untuk angkutan batubara di Sumatera (Babaranjang).
+         Keduanya memiliki performa "heavy hauler" yang mirip.
+
+12. TpF2: Class 66 (1998)
+    Indonesia: Seri CC 205 (EMD GT38ACe)
+    Ket: Evolusi modern dari lokomotif diesel EMD untuk angkutan berat.
+
+13. TpF2: EuroSprinter / BR 185 (Modern)
+    Indonesia: KRL Commuter Line / Bandara
+    Ket: Bisa digunakan sebagai proksi untuk kereta rel listrik (EMU) modern yang 
+         melayani wilayah Jabodetabek.
+
+---
+Dibuat oleh: tomylana93
+Mod: Indonesia Fever
