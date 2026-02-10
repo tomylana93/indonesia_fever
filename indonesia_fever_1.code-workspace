@@ -1,14 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../base_game"
-		},
-		{
-			"path": "../senseless_industry"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": ".",
+    },
+    {
+      "path": "../base_game",
+    },
+  ],
+  "settings": {},
 }

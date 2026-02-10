@@ -82,10 +82,10 @@ return {
 			-- Add meandering curves to help river flow naturally and avoid dead ends
 			local curvesConfig = {
 				getStrength = function(position) 
-					return 0.6 -- Moderate curve strength
+					return 1.0 -- Stronger meanders for tropical rivers
 				end,
 				getWidthMultiplier = function(position) 
-					return 1.0
+					return 1.1
 				end
 			}
 			mapgenutil.MakeCurvesOld(rivers, curvesConfig)
