@@ -48,11 +48,12 @@ function data()
 		options = {
 			nameList = { { "indonesia", _("indonesia") } },
 		},
-		runFn = function(settings, modParams)
-			game.config.earnAchievementsWithMods = true
-			game.config.industryButton = true
+	runFn = function(settings, modParams)
+		game.config.earnAchievementsWithMods = true
+		game.config.industryButton = true
 
-			local params = modParams[getCurrentModId()]
+		local params = modParams[getCurrentModId()]
+		
 			if params then
 				if params.historical_tram_electrification == 1 then
 					game.config.tramCatenaryYearFrom = 1899

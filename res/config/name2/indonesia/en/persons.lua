@@ -1,17 +1,14 @@
 local names = require "personnameutil"
 
-local firstNamesMale = names.indonesia.english.firstNamesMale
-local firstNamesFemale = names.indonesia.english.firstNamesFemale
-local lastNames = names.indonesia.english.lastNames
-
 function data()
-	return {
-		makeName = function(male)
-			if (male) then
-				return firstNamesMale[math.random(#firstNamesMale)] .. " " .. lastNames[math.random(#lastNames)]
-			else
-				return firstNamesFemale[math.random(#firstNamesFemale)] .. " " .. lastNames[math.random(#lastNames)]
-			end
+return {
+	makeName = function (male)
+		local source = names.indonesia.english
+		if (male) then
+			return source.firstNamesMale[math.random(#source.firstNamesMale)] .. " " .. source.lastNames[math.random(#source.lastNames)]
+		else
+			return source.firstNamesFemale[math.random(#source.firstNamesFemale)] .. " " .. source.lastNames[math.random(#source.lastNames)]
 		end
-	}
+	end
+}
 end

@@ -1,6 +1,4 @@
-local names = {}
-
-names.indonesia = {
+local indonesianData = {
 	english = {
 		firstNamesMale = {
 			"Ahmad", "Budi", "Cahyo", "Dedi", "Eko", "Fajar", "Guntur", "Hery", "Iwan", "Joko",
@@ -26,5 +24,16 @@ names.indonesia = {
 		},
 	}
 }
+
+local names = {
+	indonesia = indonesianData,
+}
+
+-- Fallback: Jika ada script (bawaan game) mencari negara lain, arahkan ke Indonesia
+setmetatable(names, {
+	__index = function(t, key)
+		return indonesianData
+	end
+})
 
 return names
