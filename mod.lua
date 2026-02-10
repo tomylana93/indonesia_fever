@@ -35,6 +35,13 @@ return {
 				values = { _("param_val_default"), _("param_val_historical_bus") },
 				defaultIndex = 1,
 			},
+			{
+				key = "vehicle_set",
+				name = _("param_vehicle_set"),
+				tooltip = _("tooltip_vehicle_set"),
+				values = { _("param_val_default"), _("param_val_historical") },
+				defaultIndex = 1,
+			},
 		},
 		visible = true,
 	},
@@ -55,12 +62,14 @@ return {
 			if params.historical_bus_line == 1 then
 				game.config.busLaneYearFrom = 2004
 			end
-		end
 
-		-- Load vehicle filter script
-		local vehicleFilter = require "vehicle_filter"
-		if vehicleFilter and vehicleFilter.data then
-			vehicleFilter.data().runFn(settings, modParams)
+			-- Load vehicle filter script if Indonesian (Historical) is selected
+			if params.vehicle_set == 1 then
+				local vehicleFilter = require "vehicle_filter"
+				if vehicleFilter and vehicleFilter.data then
+					vehicleFilter.data().runFn(settings, modParams)
+				end
+			end
 		end
 	end,
 	postRunFn = function (settings, modParams)

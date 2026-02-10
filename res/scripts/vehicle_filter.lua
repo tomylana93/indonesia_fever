@@ -51,7 +51,9 @@ local multipleUnitFilterList = {
     "russian_class_ed9m.lua",
 }
 
-function data()
+local M = {}
+
+function M.data()
     return {
         runFn = function (settings, modParams)
             -- Filter for individual vehicle models (.mdl files)
