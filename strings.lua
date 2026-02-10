@@ -3,7 +3,7 @@ function data()
 		en = {
 			["mod_name"] = "Indonesia Fever",
 			["mod_desc"] =
-			"A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n• Indonesian Name Generator (Towns, Streets, Persons)\n• Custom Map Generators (Trees on hills/rivers, rocks on shores)\n• Tropical Rivers & Meandering (Curvy rivers for tropical islands)\n• Custom Vehicle Filtering (Indonesian context)\n• Historical Infrastructure Years (Configurable)\n• Earn Achievements with mods\n• Industry Button enabled",
+			"A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n- Indonesian Name Generator (Towns, Streets, Persons)\n- Custom Map Generators (Trees on hills/rivers, rocks on shores)\n- Tropical Rivers & Meandering (Curvy rivers for tropical islands)\n- Custom Vehicle Filtering (Indonesian context)\n- Historical Infrastructure Years (Configurable)\n- Earn Achievements with mods\n- Industry Button enabled",
 			["param_val_default"] = "Default",
 			["param_historical_tram"] = "Tram Catenary Era",
 			["param_val_historical_tram"] = "Historical",
@@ -26,29 +26,9 @@ function data()
 			["Street names"] = "Indonesian Streets",
 			["Person names"] = "Indonesian Persons",
 		},
-		id = {
-			["mod_name"] = "Indonesia Fever",
-			["mod_desc"] =
-			"Mod yang berfokus pada konten bertema Indonesia untuk Transport Fever 2.\n\nFitur:\n• Generator Nama Indonesia (Kota, Jalan, Nama Orang)\n• Generator Peta Khusus (Pohon di bukit/sungai, batu di pantai)\n• Sungai Tropis & Meander (Aliran sungai melengkung alami)\n• Filter Kendaraan Khusus (Sesuai sejarah Indonesia)\n• Tahun Infrastruktur Historis (Dapat dikonfigurasi)\n• Tetap dapatkan Achievement meskipun menggunakan mod\n• Tombol Industri diaktifkan",
-			["param_val_default"] = "Default",
-			["param_historical_tram"] = "Era Listrik Trem",
-			["param_val_historical_tram"] = "Historis (1899)",
-			["tooltip_historical_tram"] = "Mengatur tahun tersedianya trem listrik ke 1899 (Era Trem Listrik Batavia).",
-			["param_historical_track"] = "Era Listrik Kereta Api",
-			["param_val_historical_track"] = "Historis (1925)",
-			["tooltip_historical_track"] = "Mengatur tahun tersedianya listrik kereta api ke 1925 (Era Elektrifikasi Jalur Tanjung Priok).",
-			["param_historical_bus"] = "Era Jalur Bus (Busway)",
-			["param_val_historical_bus"] = "Historis (2004)",
-			["tooltip_historical_bus"] = "Mengatur tahun tersedianya jalur bus (Bus Lane) ke 2004 (Era Transjakarta).",
-			["param_vehicle_set"] = "Set Kendaraan",
-			["param_val_historical"] = "Indonesia (Filter Historis)",
-			["tooltip_vehicle_set"] = "Pilih set kendaraan yang tersedia. 'Indonesia' memfilter kendaraan bawaan game agar sesuai dengan konteks historis Indonesia.",
-			["param_spawn_animals"] = "Pemunculan Hewan",
-			["tooltip_spawn_animals"] = "Aktifkan atau nonaktifkan hewan liar yang muncul di peta.",
-			["indonesia"] = "Indonesia",
-			["Town names"] = "Nama Kota Indonesia",
-			["Street names"] = "Nama Jalan Indonesia",
-			["Person names"] = "Nama Orang Indonesia",
-		},
 	}
 end
+
+
+
+

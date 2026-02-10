@@ -25,14 +25,14 @@ function data()
 					key = "historical_track_electrification",
 					name = _("param_historical_track"),
 					tooltip = _("tooltip_historical_track"),
-					values = { _("param_val_default"), _("param_val_historical_track") },
+					values = { _("param_val_default"), _("param_historical_track") },
 					defaultIndex = 1,
 				},
 				{
 					key = "historical_bus_line",
 					name = _("param_historical_bus"),
 					tooltip = _("tooltip_historical_bus"),
-					values = { _("param_val_default"), _("param_val_historical_bus") },
+					values = { _("param_val_default"), _("param_historical_bus") },
 					defaultIndex = 1,
 				},
 				{
@@ -55,12 +55,12 @@ function data()
 		options = {
 			nameList = { { "indonesia", _("indonesia") } },
 		},
-	runFn = function(settings, modParams)
-		game.config.earnAchievementsWithMods = true
-		game.config.industryButton = true
+		runFn = function(settings, modParams)
+			game.config.earnAchievementsWithMods = true
+			game.config.industryButton = true
 
-		local params = modParams[getCurrentModId()]
-		
+			local params = modParams[getCurrentModId()]
+			
 			if params then
 				if params.historical_tram_electrification == 1 then
 					game.config.tramCatenaryYearFrom = 1899
