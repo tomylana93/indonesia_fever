@@ -46,7 +46,7 @@ function data()
 			visible = true,
 		},
 		options = {
-			nameList = { "indonesia", _("indonesia") },
+			nameList = { { "indonesia", _("indonesia") } },
 		},
 		runFn = function(settings, modParams)
 			game.config.earnAchievementsWithMods = true

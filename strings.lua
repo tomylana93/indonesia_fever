@@ -15,7 +15,7 @@ function data()
 			["param_val_historical_bus"] = "Historical",
 			["tooltip_historical_bus"] = "Sets the year bus lanes become available to 2004.",
 			["param_vehicle_set"] = "Vehicle Set",
-			["param_val_historical"] = "Indonesian (Historical Filter)",
+			["param_val_historical"] = "Historical",
 			["tooltip_vehicle_set"] =
 			"Select the set of available vehicles. 'Indonesian' filters base game vehicles to match a historical Indonesian context.",
 			["indonesia"] = "Indonesia",
