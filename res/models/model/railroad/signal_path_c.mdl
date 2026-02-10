@@ -1,0 +1,86 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 1.0460200309753, 0.57008701562881, 6.4839911460876, },
+		bbMin = { -1.0215300321579, -0.58991199731827, -1.3099180459976, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 1.0337750911713, 0.57999950647354, 3.896954536438, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "railroad/signal_path_c/07_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/01_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/02_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/11_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/08_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/10_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/05_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/03_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/04_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/09_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/12_-_defaultm.onetex.001.mtl", },
+						mesh = "railroad/signal_path_c/signal_path_c_lod0.msh",
+						name = "ATP_Standart sinyal masuk 3Aspek",
+						transf = { 1, 0, 0, 0, -0, 1, 0, 0, 0, -0, 1, 0, 0, -2.5999999046326, -0.30000001192093, 1, },
+					},
+					{
+						animations = {
+							green = {
+								params = {
+									id = "railroad/signal_path_c/green/signal_path_c_light_red.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/emissive/railroad_lights_all.mtl", },
+						mesh = "railroad/signal_path_c/signal_path_c_light_red_lod0.msh",
+						name = "signal_path_c_light_red",
+						transf = { 1, 0, 0, 0, -0, 1, 0, 0, 0, -0, 1, 0, -0.56999999284744, -2.6099998950958, -0.80000001192093, 1, },
+					},
+					{
+						animations = {
+							red = {
+								params = {
+									id = "railroad/signal_path_c/red/signal_path_c_light_green.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/emissive/railroad_lights_all.mtl", },
+						mesh = "railroad/signal_path_c/signal_path_c_light_green_lod0.msh",
+						name = "signal_path_c_light_green",
+						transf = { 1, 0, 0, 0, -0, 1, 0, 0, 0, -0, 1, 0, -0.56999999284744, -2.6199998855591, -0.62000000476837, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 678.51928710938,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 2000,
+			yearTo = 0,
+		},
+		cost = {
+			price = 3000,
+			priceScale = 1,
+		},
+		description = {
+			description = _("ATP_Standart Sinyal Masuk"),
+			name = _("ATP_Standart Sinyal Masuk"),
+		},
+		signal = {
+			soundevent = "",
+			type = "PATH_SIGNAL",
+			upright = true,
+		},
+	},
+	version = 1,
+}
+end
+
+
+
+

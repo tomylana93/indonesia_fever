@@ -3,7 +3,7 @@ function data()
 		en = {
 			["mod_name"] = "Indonesia Fever",
 			["mod_desc"] =
-			"A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n- Indonesian Name Generator (Towns, Streets, Persons)\n- Custom Map Generators (Trees on hills/rivers, rocks on shores)\n- Tropical Rivers & Meandering (Curvy rivers for tropical islands)\n- Custom Vehicle Filtering (Indonesian context)\n- Historical Infrastructure Years (Configurable)\n- Earn Achievements with mods\n- Industry Button enabled",
+			"A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n- Indonesian Name Generator (Towns, Streets, Persons)\n- Custom Map Generators (Trees on hills/rivers, rocks on shores)\n- Tropical Rivers & Meandering (Curvy rivers for tropical islands)\n- Custom Vehicle Filtering (Indonesian context)\n- Historical Infrastructure Years (Configurable)\n- Earn Achievements with mods\n- Industry Button enabled\n\nCredits:\n- Signal model (ATP_Standart signal Daop 2 Indonesia): DFN",
 			["param_val_default"] = "Default",
 			["param_historical_tram"] = "Tram Catenary Era",
 			["param_val_historical_tram"] = "Historical",

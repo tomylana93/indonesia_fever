@@ -1,0 +1,32 @@
+local vec3 = require "vec3"
+local transf = require "transf"
+
+
+function data()
+return {
+	times = { 0,2,200,202, },
+	transfs = {
+		transf.scaleRotZYXTransl(
+						vec3.new( 1.0, 1.0, 1.0 ), 
+						transf.degToRad(0.0, 0.0, 0.0), 
+						vec3.new( 0.0, 0.0, 0.0)
+					),
+		transf.scaleRotZYXTransl(
+						vec3.new( 1.0, 1.0, 1.0 ), 
+						transf.degToRad(0.0, 0.0, 0.0), 
+						vec3.new( 0.0, 0.0, 0.0)
+					),					
+		transf.scaleRotZYXTransl(
+						vec3.new( 1.0, 1.0, 1.0 ), 
+						transf.degToRad(0.0, 0.0, 0.0), 
+						vec3.new( 0.0, 0.0, 0.0)
+					),
+		transf.scaleRotZYXTransl(
+						vec3.new( 1.0,  0.0,  0.0 ), 
+						transf.degToRad(0.0, 0.0, 0.0), 
+						vec3.new( 0.15, 0.0, 5.0)
+					),
+	},
+		
+}
+end

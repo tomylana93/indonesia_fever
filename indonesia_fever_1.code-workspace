@@ -6,6 +6,9 @@
     {
       "path": "../base_game",
     },
+    {
+      "path": "../indo_signal",
+    },
   ],
   "settings": {},
 }
