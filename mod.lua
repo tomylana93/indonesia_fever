@@ -42,6 +42,13 @@ function data()
 					values = { _("param_val_default"), _("param_val_historical") },
 					defaultIndex = 1,
 				},
+				{
+					key = "spawn_animals",
+					name = _("param_spawn_animals"),
+					tooltip = _("tooltip_spawn_animals"),
+					values = { _("On"), _("Off") },
+					defaultIndex = 0,
+				},
 			},
 			visible = true,
 		},
@@ -63,6 +70,13 @@ function data()
 				end
 				if params.historical_bus_line == 1 then
 					game.config.busLaneYearFrom = 2004
+				end
+
+				-- Animal spawn control
+				if params.spawn_animals == 1 then
+					addFileFilter("model/animal", function(fileName, data)
+						return false
+					end)
 				end
 
 				-- Load vehicle filter script if Indonesian (Historical) is selected

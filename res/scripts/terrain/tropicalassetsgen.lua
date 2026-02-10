@@ -25,9 +25,6 @@ data.Make = function(layers, config, mkTemp, heightMap, ridgesMap, distanceMap)
 	
 	-- #################
 	-- #### CONFIG (MODIFIED FOR INDONESIA)
-	local palmProbability = 0.7
-	local shrubProbability = 0.4
-	
 	-- Heights
 	local hillsLowLimit = 10 
 	local hillsMiddleLimit = 60 
@@ -39,13 +36,6 @@ data.Make = function(layers, config, mkTemp, heightMap, ridgesMap, distanceMap)
 	
 	local hillForestDist = { 0.35 }
 	local hillForestTypes = { 0, forest }
-	
-	-- LEVEL 4: Water trees
-	local palmBeachSteps = {0.3, 0.7}
-	local palmBeachTypes = {palm, shrub, 0}
-	
-	local treeDistanceFromRiver = 40 
-	local maxPalmSlope = 0.4
 	
 	-- #################
 	-- #### NO WATER
@@ -74,7 +64,7 @@ data.Make = function(layers, config, mkTemp, heightMap, ridgesMap, distanceMap)
 	layers:Pwconst(slopeMap, slopeMaskMap, {maxSlope}, {1, 0})
 
 	-- #################
-	-- #### LEVEL 3 : Hill Trees
+	-- #### LEVEL 3 : Hill Trees (ONLY TREES IN MOUNTAINS)
 	layers:Pwlerp(heightMap, probabilityMap,
 		{0, hillsMiddleLimit, hillsHighLimit, hillsHighLimit + 40},
 		{hillDensityBase, hillDensityBase, 0, 0}
@@ -96,32 +86,6 @@ data.Make = function(layers, config, mkTemp, heightMap, ridgesMap, distanceMap)
 		layers:Mask(xtMap, probabilityMap, forestMap)
 		xtMap = mkTemp:Restore(xtMap)
 	end
-	
-	-- #################
-	-- #### BEACH & RIVER TREES (PALMS)
-	local palmTempMap = mkTemp:Get()
-	layers:RidgedNoise(palmTempMap, { octaves = 3, lacunarity = 10.5, frequency = 1.0 / 1000.0, gain = 1.2})
-	layers:Map(palmTempMap, palmTempMap, {-1.3, 0.7}, {0, 1})
-	
-	layers:Pwlerp(distanceMap, probabilityMap, {0, 5, treeDistanceFromRiver, treeDistanceFromRiver + 20}, {0, 1, 0, 0})
-	
-	local hmCutoff = mkTemp:Get()
-	layers:Pwconst(heightMap, hmCutoff, {0.4, 25}, {0, 1, 0}) 
-	layers:Mul(probabilityMap, hmCutoff, probabilityMap)
-	hmCutoff = mkTemp:Restore(hmCutoff)
-	
-	layers:Mul(palmTempMap, probabilityMap, palmTempMap)
-	
-	local palmSlopeMask = mkTemp:Get()
-	layers:Pwconst(slopeMap, palmSlopeMask, {maxPalmSlope}, {1, 0})
-	layers:Mul(palmTempMap, palmSlopeMask, palmTempMap)
-	palmslopeMask = mkTemp:Restore(palmSlopeMask)
-	
-	layers:Pwconst(ditheringMap, probabilityMap, palmBeachSteps, palmBeachTypes)
-	
-	local palmForest = mkTemp:Get()
-	layers:Mask(palmTempMap, probabilityMap, palmForest, 0.5, "GREATER")
-	layers:Add(palmForest, forestMap, forestMap)
 	
 	-- #################
 	-- #### ROCKS
@@ -151,8 +115,6 @@ data.Make = function(layers, config, mkTemp, heightMap, ridgesMap, distanceMap)
 	layers:Pwconst(rocksMap, rocksMap, {0.5}, {0, 2}) -- 2 = granite
 	
 	-- Cleanup
-	mkTemp:Restore(palmForest)
-	mkTemp:Restore(palmTempMap)
 	mkTemp:Restore(tmpRocksMap)
 	mkTemp:Restore(tmpNoise3Map)
 	mkTemp:Restore(ridgesMask)
