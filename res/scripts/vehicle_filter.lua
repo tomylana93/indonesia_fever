@@ -36,9 +36,20 @@ local vehicleFilterList = {
     "saurer_tuescher_v2.mdl", "benz_o6600_v2.mdl", "maz_103_v2.mdl", "berkhof_duvedec_v2.mdl",
     "volvo_5000_v2.mdl", "wright_streetcar_rtv_v2.mdl",
 
-    -- --- TRAMS (MOTORIZED ONLY) ---
+    -- --- HORSE TRAMS ---
+    "strassenbahn1850_v2.mdl", "strassenbahn1850_usa_v2.mdl", "horse_trolley_car_v2.mdl",
+
+    -- --- STEAM TRAMS ---
+    "dampftram_v2.mdl",
+
+    -- --- ELECTRIC TRAMS (EARLY) ---
     "st_petersburg_v2.mdl", "halle_v2.mdl", "san_diego_v2.mdl", "schst_v2.mdl",
-    "peter_witt_streetcar_v2.mdl", "be4_6mirage_v2.mdl", "be5_6_v2.mdl",
+    "peter_witt_streetcar_v2.mdl",
+
+    -- --- TRAMS (BREAKHIR / LATE CLASSIC) ---
+    "pcc_1643_pittsburgh_v2.mdl", "pcc_a_7_v2.mdl",
+
+
 }
 
 local multipleUnitFilterList = {

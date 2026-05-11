@@ -1,48 +1,63 @@
 LIST TRAM (TRAMS) TRANSPORT FEVER 2 VS SEJARAH INDONESIA
 ======================================================
 
-Daftar ini mencocokkan trem bermotor di base game TpF2 dengan armada trem 
-yang pernah beroperasi di Indonesia (Era Batavia, Surabaya, Medan).
+Daftar ini mencocokkan trem di base game TpF2 dengan armada trem 
+yang pernah beroperasi di Indonesia sesuai timeline sejarah.
 
---- ERA TRAM LISTRIK AWAL (1899 - 1950) ---
+--- ERA TREM KUDA (1869) ---
 
-1. TpF2: St. Petersburg Streetcar (1863)
+1. TpF2: Strassenbahn 1850 (1850)
+   Indonesia: Trem Kuda Batavia (1869)
+   Ket: Trem kuda Eropa yang menjadi proksi awal trem berkuda 
+        Bataviasche Tramweg Maatschappij (BTM).
+
+2. TpF2: Horse Trolley Car (1850)
+   Indonesia: Trem Kuda Surabaya / Kota-kota Hindia Belanda
+   Ket: Variasi gerbong kuda dengan kapasitas sedang, cocok untuk 
+        mewakili trem kuda di berbagai kota kolonial.
+
+--- ERA TREM UAP (1881) ---
+
+3. TpF2: Dampftram (1882)
+   Indonesia: Trem Uap Batavia (1881)
+   Ket: Lokomotif uap kecil dengan gerbong penumpang yang mewakili 
+        trem uap yang mulai menggantikan trem kuda.
+
+--- ERA TREM LISTRIK AWAL (1899 - 1950) ---
+
+4. TpF2: St. Petersburg Streetcar (1863)
    Indonesia: Trem Listrik BETM (Batavia)
    Ket: Meskipun tahunnya lebih awal di TpF2, bentuk gerbong tunggal ini 
         mirip dengan trem listrik awal di Jakarta.
 
-2. TpF2: Stadtbahn Halle (1887)
+5. TpF2: Stadtbahn Halle (1887)
    Indonesia: Trem Listrik OJS (Surabaya) / Trem Medan
    Ket: Representasi yang baik untuk trem listrik jalur utama di Surabaya dan Medan 
         pada awal abad ke-20.
 
-3. TpF2: San Diego Electric Trolley (1893)
+6. TpF2: San Diego Electric Trolley (1893)
    Indonesia: Trem Listrik Batavia (2-axle / 4-axle)
    Ket: Trem jenis trolley dengan tiang tunggal yang umum dioperasikan.
 
-4. TpF2: Ce 2/2 SchSt (1901)
+7. TpF2: Ce 2/2 SchSt (1901)
    Indonesia: Trem Listrik Modern Batavia/Surabaya (Pra-1960)
    Ket: Trem listrik bergandar dua (2-axle) yang sering diupgrade atau 
         dipesan di awal abad 20.
 
-5. TpF2: Peter Witt Streetcar (1917)
+8. TpF2: Peter Witt Streetcar (1917)
    Indonesia: Trem Listrik Surabaya / Jakarta (Pasca-1920)
    Ket: Trem yang lebih panjang dengan desain pintu di tengah, mewakili 
         trem dengan kapasitas lebih besar.
 
---- ERA TRAM MODERN (1960 - 2000++) ---
+--- ERA TREM BREAKHIR (1962) ---
 
-6. TpF2: Be 4/6 Mirage (1965)
-   Indonesia: LRT / MRT (Proksi Modern)
-   Ket: Trem ini memiliki tampilan modern yang bisa menjadi proksi 
-        untuk sistem Light Rail Transit (LRT) atau Mass Rapid Transit (MRT) 
-        yang sedang berkembang di Indonesia.
-
-7. TpF2: Be 5/6 Cobra (2001)
-   Indonesia: LRT / MRT (Proksi Modern)
-   Ket: Trem modern dengan lantai rendah (low-floor) dan desain ramping, 
-        sangat cocok sebagai proksi LRT/MRT urban.
+9. TpF2: PCC 1643 Pittsburgh (1936)
+   Indonesia: Trem Akhir / Transisi Bus Listrik (1962)
+   Ket: Trem PCC dengan desain arus terus yang populer di era 1950-1960, 
+        mewakili armada trem terakhir sebelum penghentian operasi 
+        trem konvensional di Jakarta tahun 1962.
 
 ---
 Dibuat oleh: tomylana93
 Mod: Indonesia Fever
+Timeline disesuaikan dengan sejarah perkeretaapian Indonesia.
