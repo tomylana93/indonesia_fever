@@ -3,7 +3,13 @@ function data()
 		en = {
 			["mod_name"] = "Indonesia Fever",
 			["mod_desc"] =
-			"A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n- Indonesian Name Generator (Towns, Streets, Persons)\n- Custom Map Generators for tropical, temperate, and desert maps\n- Tropical Rivers & Meandering\n- Historical Vehicle Availability Filter\n- Configurable Infrastructure Years for tram catenary, rail electrification, and bus lanes\n- Optional base game animal spawning toggle\n- Earn Achievements with mods\n- Industry Button enabled\n\nCredits:\n- Signal model (ATP_Standart signal Daop 2 Indonesia): DFN",
+			"A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n- Indonesian Name Generator (Towns, Streets, Persons)\n- Custom Map Generators for tropical, temperate, and desert maps\n- Tropical Rivers & Meandering\n- Historical Vehicle Availability Filter\n- Configurable Infrastructure Years for tram catenary, rail electrification, and bus lanes\n- Three era-specific road depots based on the base-game depot model\n- Optional base game animal spawning toggle\n- Earn Achievements with mods\n- Industry Button enabled\n\nCredits:\n- Signal model (ATP_Standart signal Daop 2 Indonesia): DFN",
+			["road_depot_era_a_name"] = "Road Depot Era A",
+			["road_depot_era_a_desc"] = "Base-game road depot adapted for the early era with reduced modern yard equipment.",
+			["road_depot_era_b_name"] = "Road Depot Era B",
+			["road_depot_era_b_desc"] = "Road depot for the middle era with updated depot entrance roads and transitional yard equipment.",
+			["road_depot_era_c_name"] = "Road Depot Era C",
+			["road_depot_era_c_desc"] = "Road depot for the late era with newer entrance roads and more modern yard clutter.",
 			["atp_standard_entry_signal"] = "ATP Standard Entry Signal",
 			["atp_standard_entry_signal_left"] = "ATP Standard Entry Signal (Left)",
 			["param_val_default"] = "Default",
