@@ -5,7 +5,7 @@ return {
 	sidewalkWidth = 4.0,
 	sidewalkHeight = .0,
 	yearFrom = 0,
-	yearTo = 1945,
+	yearTo = 0,
 	aiLock = false,
 	country = true,
 	speed = 50.0,

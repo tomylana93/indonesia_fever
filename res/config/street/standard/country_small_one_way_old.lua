@@ -9,14 +9,14 @@ return {
 	sidewalkWidth = 3.0,
 	sidewalkHeight = .0,
 	yearFrom = 0,
-	yearTo = 1945,
+	yearTo = 0,
 	aiLock = false,
 	country = true,
 	speed = 30.0,
 	type = "one way country old small",
 	name = _("Small one-way country road"),
 	desc = _("One-lane one-way country road with a speed limit of %2%."),
-	categories = { "country" },
+	categories = { "one-way" },
 	materials = {
 		streetPaving = {
 			name = "street/country_old_small_paving.mtl",
@@ -77,13 +77,15 @@ return {
 		sidewalkBorderInner = {
 		},
 		sidewalkBorderOuter = {
+			name = "street/country_old_small_sidewalk_border_outer.mtl",
+			size = { 8.0, 4.0 }
 		},
 		sidewalkCurb = {
 		},
 		sidewalkWall = {
 		}
 	},
-	cost = 25.0,
+	cost = 10.0,
 	borderGroundTex = "street_border.lua",
 	sidewalkFillGroundTex = "country_sidewalk.lua",
 }
