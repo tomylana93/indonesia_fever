@@ -18,7 +18,7 @@ function data()
 			["param_val_historical"] = "Indonesian (Historical Filter)",
 			["tooltip_vehicle_set"] = "Select the set of available vehicles. 'Indonesian' filters base game vehicles to match a historical Indonesian context.",
 			["param_spawn_animals"] = "Animal Spawning",
-			["tooltip_spawn_animals"] = "Enable or disable wild animals from spawning on the map.",
+			["tooltip_spawn_animals"] = "Enable or disable base game wild animals from spawning on the map.",
 			["On"] = "On",
 			["Off"] = "Off",
 			["indonesia"] = "Indonesia",
