@@ -1,15 +1,15 @@
 function data()
 return {
 	numLanes = 2,
-	streetWidth = 10.0,
+	streetWidth = 8.0,
 	sidewalkWidth = 4.0,
 	sidewalkHeight = .3,
 	yearFrom = 1990,
 	yearTo = 0,
-	aiLock = true,
+	aiLock = false,
 	country = false,
 	speed = 50.0,
-	type = "depot new medium",
+	type = "new medium",
 	name = _("Medium street"),
 	desc = _("Two-lane street with a speed limit of %2%."),
 	categories = { "urban" },
@@ -114,7 +114,7 @@ return {
 			offsetOrth = 0.5,
 			randRot = false,
 			oneSideOnly = false,
-			alignToElevation = true,
+			alignToElevation = false,
 			avoidFaceEdges = false,
 		},
 		{
@@ -136,7 +136,7 @@ return {
 			offsetOrth = 3.0,
 			randRot = false,
 			oneSideOnly = false,
-			alignToElevation = true,
+			alignToElevation = false,
 			avoidFaceEdges = false,
 		},
 		{
@@ -163,6 +163,6 @@ return {
 		},
 	},
 	signalAssetName = "asset/ampel.mdl",
-	cost = 56.0,
+	cost = 40.0,
 }
 end

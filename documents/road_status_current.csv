@@ -1,0 +1,34 @@
+file,scope,era_label,year_from,year_to,category,flow,width_class,lanes,street_width,sidewalk_width,speed,type,name
+res/config/street/standard/country_large_mid.lua,standard,era_2_mid,1945,1990,country,two_way,large,4,16.0,4.0,70.0,country mid large,Large country road
+res/config/street/standard/country_large_new.lua,standard,era_3_new,1990,0,country,two_way,large,4,16.0,4.0,70.0,country new large,Large country road
+res/config/street/standard/country_large_old.lua,standard,era_1_old,0,1945,country,two_way,large,4,16.0,4.0,70.0,country old large,Large country road
+res/config/street/standard/country_large_one_way_new.lua,standard,era_3_new,1990,0,highway,one_way,large,5,12.0,4.0,70.0,one way country new large,Large highway
+res/config/street/standard/country_medium_mid.lua,standard,era_2_mid,1945,1990,country,two_way,medium,2,8.0,4.0,50.0,country mid medium,Medium country road
+res/config/street/standard/country_medium_new.lua,standard,era_3_new,1990,0,country,two_way,medium,2,8.0,4.0,50.0,country new medium,Medium country road
+res/config/street/standard/country_medium_old.lua,standard,era_1_old,0,1945,country,two_way,medium,2,8.0,4.0,50.0,country old medium,Medium country road
+res/config/street/standard/country_medium_one_way_new.lua,standard,era_3_new,1990,0,highway,one_way,medium,4,8.0,4.0,50.0,one way country new medium,Medium highway
+res/config/street/standard/country_small_mid.lua,standard,era_2_mid,1945,1990,country,two_way,small,2,6.0,3.0,30.0,country mid small,Small country road
+res/config/street/standard/country_small_new.lua,standard,era_3_new,1990,0,country,two_way,small,2,6.0,3.0,30.0,country new small,Small country road
+res/config/street/standard/country_small_old.lua,standard,era_1_old,0,1945,country,two_way,small,2,6.0,3.0,30.0,country old small,Small country road
+res/config/street/standard/country_small_one_way_old.lua,standard,era_1_old,0,1945,country,one_way,small,3,3.0,3.0,30.0,one way country old small,Small one-way country road
+res/config/street/standard/country_small_one_way_new.lua,standard,era_3_new,1990,0,highway,one_way,small,3,3.0,3.0,30.0,one way country new small,Highway ramp
+res/config/street/standard/country_x_large_mid.lua,standard,era_2_mid,1945,1990,country,two_way,x_large,6,24.0,4.0,80.0,country mid xlarge,Extra-large country road
+res/config/street/standard/country_x_large_new.lua,standard,era_3_new,1990,0,country,two_way,x_large,6,24.0,4.0,80.0,country new xlarge,Extra-large country road
+res/config/street/standard/town_large_mid.lua,standard,era_2_mid,1945,1990,urban,two_way,large,4,16.0,4.0,70.0,mid large,Large street
+res/config/street/standard/town_large_new.lua,standard,era_3_new,1990,0,urban,two_way,large,4,16.0,4.0,70.0,new large,Large street
+res/config/street/standard/town_large_old.lua,standard,era_1_old,0,1945,urban,two_way,large,4,16.0,4.0,70.0,old large,Large street
+res/config/street/standard/town_large_one_way_new.lua,standard,era_3_new,1990,0,one-way,one_way,large,5,12.0,4.0,70.0,one way new large,Large one-way street
+res/config/street/standard/town_medium_mid.lua,standard,era_2_mid,1945,1990,urban,two_way,medium,2,8.0,4.0,50.0,mid medium,Medium street
+res/config/street/standard/town_medium_new.lua,standard,era_3_new,1990,0,urban,two_way,medium,2,8.0,4.0,50.0,new medium,Medium street
+res/config/street/standard/town_medium_old.lua,standard,era_1_old,0,1945,urban,two_way,medium,2,8.0,4.0,50.0,old medium,Medium street
+res/config/street/standard/town_medium_one_way_new.lua,standard,era_3_new,1990,0,one-way,one_way,medium,4,8.0,4.0,50.0,one way new medium,Medium one-way street
+res/config/street/standard/town_small_mid.lua,standard,era_2_mid,1945,1990,urban,two_way,small,2,6.0,3.0,30.0,mid small,Small street
+res/config/street/standard/town_small_new.lua,standard,era_3_new,1990,0,urban,two_way,small,2,6.0,3.0,30.0,new small,Small street
+res/config/street/standard/town_small_one_way_old.lua,standard,era_1_old,0,1945,one-way,one_way,small,3,3.0,3.0,30.0,one way old small,Small one-way street
+res/config/street/standard/town_small_old.lua,standard,era_1_old,0,1945,urban,two_way,small,2,6.0,3.0,30.0,old small,Small street
+res/config/street/standard/town_small_one_way_new.lua,standard,era_3_new,1990,0,one-way,one_way,small,3,3.0,3.0,30.0,one way new small,Small one-way street
+res/config/street/standard/town_x_large_mid.lua,standard,era_2_mid,1945,1990,urban,two_way,x_large,6,24.0,4.0,80.0,mid xlarge,Extra-large street
+res/config/street/standard/town_x_large_new.lua,standard,era_3_new,1990,0,urban,two_way,x_large,6,24.0,4.0,80.0,new xlarge,Extra-large street
+res/config/street/street_depot/entrance_mid.lua,street_depot,era_2_mid,1945,1990,urban,two_way,medium,2,10.0,4.0,50.0,depot mid medium,Medium street
+res/config/street/street_depot/entrance_new.lua,street_depot,era_3_new,1990,0,urban,two_way,medium,2,10.0,4.0,50.0,depot new medium,Medium street
+res/config/street/street_depot/entrance_old.lua,street_depot,era_1_old,0,1945,urban,two_way,medium,2,10.0,4.0,50.0,old medium,Medium street

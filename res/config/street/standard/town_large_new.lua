@@ -1,17 +1,17 @@
 function data()
 return {
-	numLanes = 2,
-	streetWidth = 10.0,
+	numLanes = 4,
+	streetWidth = 16.0,
 	sidewalkWidth = 4.0,
 	sidewalkHeight = .3,
 	yearFrom = 1990,
 	yearTo = 0,
-	aiLock = true,
+	aiLock = false,
 	country = false,
-	speed = 50.0,
-	type = "depot new medium",
-	name = _("Medium street"),
-	desc = _("Two-lane street with a speed limit of %2%."),
+	speed = 70.0,
+	type = "new large",
+	name = _("Large street"),
+	desc = _("Four-lane street with a speed limit of %2%."),
 	categories = { "urban" },
 	borderGroundTex = "street_border.lua",
 	materials = {
@@ -20,19 +20,24 @@ return {
 			size = { 8.0, 8.0 }
 		},
 		streetBorder = {
-			name = "street/new_medium_border.mtl",
-			size = { 2.0, .3 }
+			name = "street/new_large_border.mtl",
+			size = { 6.0, .5 }
 		},
 		streetLane = {
 			name = "street/new_medium_lane.mtl",
 			size = { 4.0, 4.0 }
 		},
-		streetStripe = {
-
+		streetArrow = {
+			name = "street/default_arrows.mtl",
+			size = { 9.0, 3.0 }
 		},
-		streetStripeMedian = {
+		streetStripe = {
 			name = "street/new_medium_stripes.mtl",
 			size = { 8.0, .5 }
+		},
+		streetStripeMedian = {
+			name = "street/new_large_median.mtl",
+			size = { 4.0, 1 }
 		},
 		streetTram = {
 			name = "street/new_medium_tram_paving.mtl",
@@ -65,10 +70,6 @@ return {
 			name = "street/new_medium_crosswalk.mtl",
 			size = { 3.0, 2.5 }
 		},
-		crossingStopline = {
-			name = "street/new_medium_stopline.mtl",
-			size = { 6.0, .5 }
-		},
 		sidewalkPaving = {
 			name = "street/new_medium_sidewalk.mtl",
 			size = { 4.0, 4.0 }
@@ -96,8 +97,8 @@ return {
 	assets = {
 		{
 			name = "street/street_light_eu_c.mdl",
-			offset = 10.0,
-			distance = 20.0,
+			offset = 8.0,
+			distance = 16.0,
 			prob = 1.0,
 			offsetOrth = 3.4,
 			randRot = false,
@@ -108,19 +109,19 @@ return {
 		},
 		{
 			name = "street/street_asset_mix/fireplug_eu_c.mdl",
-			offset = 9.0,
+			offset = 10.0,
 			distance = 49.0,
 			prob = 0.5,
 			offsetOrth = 0.5,
 			randRot = false,
 			oneSideOnly = false,
-			alignToElevation = true,
+			alignToElevation = false,
 			avoidFaceEdges = false,
 		},
 		{
 			name = "street/street_asset_mix/mailbox_eu_c.mdl",
-			offset = 8,
-			distance = 40.0,
+			offset = 9,
+			distance = 39.0,
 			prob = 0.3,
 			offsetOrth = 0.4,
 			randRot = false,
@@ -136,13 +137,13 @@ return {
 			offsetOrth = 3.0,
 			randRot = false,
 			oneSideOnly = false,
-			alignToElevation = true,
+			alignToElevation = false,
 			avoidFaceEdges = false,
 		},
 		{
 			name = "asset/tree_bed_new.mdl",
-			offset = 15.0,
-			distance = 22.0,
+			offset = 13.0,
+			distance = 23.0,
 			prob = 1.0,
 			offsetOrth = 2.89,
 			randRot = false,
@@ -152,8 +153,8 @@ return {
 		},
 		{
 			name = "tree/lombardy_poplar.mdl",
-			offset = 15.0,
-			distance = 22.0,
+			offset = 13.0,
+			distance = 23.0,
 			prob = 1.0,
 			offsetOrth = 2.8,
 			randRot = true,
@@ -163,6 +164,6 @@ return {
 		},
 	},
 	signalAssetName = "asset/ampel.mdl",
-	cost = 56.0,
+	cost = 60.0,
 }
 end

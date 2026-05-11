@@ -91,7 +91,7 @@ return {
 	},
 	availability = {
 		yearFrom = 0,
-		yearTo = 1925,
+		yearTo = 1945,
 	},
 	order = 1000,
 	updateFn = function(params)

@@ -97,7 +97,7 @@ return {
 		description = _("road_depot_era_b_desc"),
 	},
 	availability = {
-		yearFrom = 1925,
+		yearFrom = 1945,
 		yearTo = 1990,
 	},
 	order = 1001,
@@ -109,7 +109,7 @@ return {
 			{
 				type = "STREET",
 				params = {
-					type = "street_depot/entrance_new.lua",
+					type = "street_depot/entrance_mid.lua",
 				},
 				edges = {
 					{ { .0, -20.79972, .0 }, { .0, -9.6163, .0 } },

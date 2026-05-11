@@ -1,7 +1,12 @@
 function data()
 return {
-	numLanes = 2,
-	streetWidth = 10.0,
+	laneConfig = {
+		{ forward = true },
+		{ forward = true },
+		{ forward = true },
+		{ forward = true },
+	},
+	streetWidth = 8.0,
 	sidewalkWidth = 4.0,
 	sidewalkHeight = .3,
 	yearFrom = 1990,
@@ -9,10 +14,10 @@ return {
 	aiLock = true,
 	country = false,
 	speed = 50.0,
-	type = "depot new medium",
-	name = _("Medium street"),
-	desc = _("Two-lane street with a speed limit of %2%."),
-	categories = { "urban" },
+	type = "one way new medium",
+	name = _("Medium one-way street"),
+	desc = _("Two-lane one-way street with a speed limit of %2%."),
+	categories = { "one-way" },
 	borderGroundTex = "street_border.lua",
 	materials = {
 		streetPaving = {
@@ -27,8 +32,13 @@ return {
 			name = "street/new_medium_lane.mtl",
 			size = { 4.0, 4.0 }
 		},
+		streetArrow = {
+			name = "street/default_arrows.mtl",
+			size = { 9.0, 3.0 }
+		},
 		streetStripe = {
-
+			name = "street/new_medium_stripes.mtl",
+			size = { 8.0, .5 }
 		},
 		streetStripeMedian = {
 			name = "street/new_medium_stripes.mtl",
@@ -101,42 +111,20 @@ return {
 			prob = 1.0,
 			offsetOrth = 3.4,
 			randRot = false,
-			oneSideOnly = false,
+			oneSideOnly = true,
 			alignToElevation = false,
 			avoidFaceEdges = false,
 			placeOnBridge = true,
 		},
 		{
 			name = "street/street_asset_mix/fireplug_eu_c.mdl",
-			offset = 9.0,
+			offset = 10.0,
 			distance = 49.0,
 			prob = 0.5,
 			offsetOrth = 0.5,
 			randRot = false,
 			oneSideOnly = false,
-			alignToElevation = true,
-			avoidFaceEdges = false,
-		},
-		{
-			name = "street/street_asset_mix/mailbox_eu_c.mdl",
-			offset = 8,
-			distance = 40.0,
-			prob = 0.3,
-			offsetOrth = 0.4,
-			randRot = false,
-			oneSideOnly = false,
 			alignToElevation = false,
-			avoidFaceEdges = false,
-		},
-		{
-			name = "street/street_asset_mix/trash_standing_c.mdl",
-			offset = 20,
-			distance = 50.0,
-			prob = 0.5,
-			offsetOrth = 3.0,
-			randRot = false,
-			oneSideOnly = false,
-			alignToElevation = true,
 			avoidFaceEdges = false,
 		},
 		{
@@ -163,6 +151,6 @@ return {
 		},
 	},
 	signalAssetName = "asset/ampel.mdl",
-	cost = 56.0,
+	cost = 40.0,
 }
 end
