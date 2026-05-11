@@ -18,7 +18,7 @@ return {
 					{
 						materials = { "railroad/signal_path_c/07_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/01_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/02_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/11_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/08_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/10_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/05_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/03_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/04_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/09_-_defaultm.onetex.003.mtl", "railroad/signal_path_c/12_-_defaultm.onetex.001.mtl", },
 						mesh = "railroad/signal_path_c/signal_path_c_lod0.msh",
-						name = "ATP_Standart sinyal masuk 3Aspek",
+						name = "atp_standard_entry_signal_3_aspects",
 						transf = { 1, 0, 0, 0, -0, 1, 0, 0, 0, -0, 1, 0, 0, -2.5999999046326, -0.30000001192093, 1, },
 					},
 					{
@@ -68,8 +68,8 @@ return {
 			priceScale = 1,
 		},
 		description = {
-			description = _("ATP_Standart Sinyal Masuk"),
-			name = _("ATP_Standart Sinyal Masuk"),
+			description = _("atp_standard_entry_signal"),
+			name = _("atp_standard_entry_signal"),
 		},
 		signal = {
 			soundevent = "",
