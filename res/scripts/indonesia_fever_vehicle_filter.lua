@@ -1,3 +1,5 @@
+local util = require "indonesia_fever_util"
+
 local vehicleFilterList = {
     -- --- EARLY / HORSE-DRAWN VEHICLES ---
     "horse_cart_as_1850.mdl", "american_horse_cart_stake_v2.mdl", "american_horse_cart_universal_v2.mdl",
@@ -62,42 +64,11 @@ local multipleUnitFilterList = {
     "russian_class_ed9m.lua",
 }
 
-local M = {}
+local filter = {}
 
-function M.data()
-    return {
-        runFn = function (settings, modParams)
-            -- Filter for individual vehicle models (.mdl files)
-            addFileFilter("model/vehicle", function (fileName)
-                -- Only filter base game files (not starter/deluxe or other mods)
-                if fileName:match("^res/models/model/vehicle/") then -- Base game path
-                    local baseFileName = fileName:match("([^/]+)$")
-                    for _, filter in ipairs(vehicleFilterList) do
-                        if baseFileName == filter then
-                            return true -- Keep this base game vehicle
-                        end
-                    end
-                    return false -- Exclude other base game vehicles
-                end
-                return true -- Allow all non-base game vehicles (from other mods)
-            end)
-
-            -- Filter for multiple unit definitions (.lua files that define the unit as a whole)
-            addFileFilter("multipleUnit", function (fileName)
-                -- Only filter base game multiple units
-                if fileName:match("^res/config/multiple_unit/") then -- Base game path for multiple units
-                    local baseFileName = fileName:match("([^/]+)$")
-                    for _, filter in ipairs(multipleUnitFilterList) do
-                        if baseFileName == filter then
-                            return true -- Keep this base game multiple unit
-                        end
-                    end
-                    return false -- Exclude other base game multiple units
-                end
-                return true -- Allow all non-base game multiple units (from other mods)
-            end)
-        end
-    }
+function filter.install()
+	addFileFilter("model/vehicle", util.baseGameFilter("res/models/model/vehicle/", vehicleFilterList))
+	addFileFilter("multipleUnit", util.baseGameFilter("res/config/multiple_unit/", multipleUnitFilterList))
 end
 
-return M
+return filter

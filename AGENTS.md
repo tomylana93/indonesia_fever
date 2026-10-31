@@ -32,12 +32,12 @@ Stock models, meshes, materials, and some construction/texture resources are pac
 - [mod.lua](mod.lua) defines mod metadata, settings UI, and runtime hooks.
 - [strings.lua](strings.lua) stores the localization keys referenced through `_()`.
 - [res/config/name2/indonesia/en](res/config/name2/indonesia/en/towns.lua) contains Indonesian town, street, and person name data.
-- [res/config/terrain_generators](res/config/terrain_generators/tropical.gen.lua) contains custom map generator definitions.
-- [res/scripts](res/scripts/vehicle_filter.lua) contains handwritten Lua helpers such as vehicle filtering and person-name utilities.
+- [res/scripts](res/scripts/indonesia_fever_vehicle_filter.lua) contains handwritten Lua helpers. Mod-owned modules use the `indonesia_fever_` prefix; `personnameutil.lua` retains its game-defined override name.
+- [res/scripts/indonesia_fever_util.lua](res/scripts/indonesia_fever_util.lua) centralizes plain-table copying/equality and exact base-game filename filtering.
 - [res/models](res/models/model/railroad/signal_path_c.mdl) contains signal assets and generated-looking model data.
 - [res/construction/industry](res/construction/industry/palm_plantation.con) and [res/config/cargo_types](res/config/cargo_types/cpo.cargo.lua) define industry layouts, recipes, availability, and cargo.
-- [res/scripts/iif_callbacks.lua](res/scripts/iif_callbacks.lua), [res/scripts/iif_industries.lua](res/scripts/iif_industries.lua), and [res/scripts/iif_towns.lua](res/scripts/iif_towns.lua) handle cargo compatibility, industry ownership, and town demand.
-- [res/config/game_script/iif_industry.lua](res/config/game_script/iif_industry.lua) handles persistent runtime state.
+- [res/scripts/indonesia_fever_callbacks.lua](res/scripts/indonesia_fever_callbacks.lua), [res/scripts/indonesia_fever_industries.lua](res/scripts/indonesia_fever_industries.lua), and [res/scripts/indonesia_fever_towns.lua](res/scripts/indonesia_fever_towns.lua) handle cargo compatibility, industry ownership, and town demand.
+- [res/config/game_script/indonesia_fever_industry.lua](res/config/game_script/indonesia_fever_industry.lua) handles persistent runtime state.
 - [INDUSTRIES.md](INDUSTRIES.md) records historical approximations, balance choices, compatibility limits, and open playtest gates.
 
 ## Working Rules
@@ -47,7 +47,7 @@ Stock models, meshes, materials, and some construction/texture resources are pac
 - When adding or renaming a mod parameter or UI label, update [mod.lua](mod.lua) and [strings.lua](strings.lua) together.
 - Keep localization keys stable. Missing `_()` entries will break the mod UI at runtime.
 - In [res/scripts/personnameutil.lua](res/scripts/personnameutil.lua), keep the fallback metatable behavior unless the task is explicitly about changing lookup behavior.
-- In [res/scripts/vehicle_filter.lua](res/scripts/vehicle_filter.lua), keep path and filename matches exact. The filter should restrict base-game assets while allowing other mods through.
+- In [res/scripts/indonesia_fever_vehicle_filter.lua](res/scripts/indonesia_fever_vehicle_filter.lua), keep path and filename matches exact. The filter should restrict base-game assets while allowing other mods through.
 - Treat `.mdl`, `.msh`, `.ani`, and `.mtl` files as asset data. Only edit them for tasks that are explicitly about models or materials.
 
 ## Validation
@@ -58,7 +58,14 @@ Stock models, meshes, materials, and some construction/texture resources are pac
 - Validate changes by loading the mod in Transport Fever 2 and smoke-testing the affected feature.
 - For settings and localization work, verify that labels and tooltips load in the mod options UI.
 - For name data, verify the Indonesian name set appears in map setup and person generation.
-- For vehicle filters or terrain generators, verify behavior in-game after a reload.
+- For vehicle filters and wildlife spawning, verify behavior in-game after a reload.
 - Use `rg` for loose mod/game scripts and inspect the stock ZIP archives for packaged assets. Search the installed Yeol reference only when comparing inherited behavior.
 - Check the actual build in the game log or main menu. The last verified local build is 35924; do not infer future compatibility from this note.
 - Native playtest and long-run economic balance remain open until evidence is recorded; preserve the checklist in [INDUSTRIES.md](INDUSTRIES.md).
+
+## Wildlife Setting
+
+- `spawn_animals` keeps its saved option indices: 0 = On (default), 1 = Off.
+- Off sets `game.config.animal.populationDensityMultiplier = 0` in `runFn`, as documented in [Base Config](https://www.wiki.transportfever2.com/doku.php?id=modding:baseconfig). It does not filter animal models or explicitly delete existing animals. It also affects mod wildlife using the engine spawning system.
+- On leaves the configured density unchanged so other mods can supply it. Apply option changes by reloading the game.
+- Offline checks cover option values, exact vehicle filtering, shared utilities, and localization. Native-engine validation is still required for spawning, option UI, and existing-save state after the game-script filename change to `indonesia_fever_industry.lua`.

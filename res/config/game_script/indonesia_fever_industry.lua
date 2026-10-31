@@ -1,5 +1,5 @@
-local towns = require "iif_towns"
-local industries = require "iif_industries"
+local towns = require "indonesia_fever_towns"
+local industries = require "indonesia_fever_industries"
 
 local state = { industryTowns = {}, townsCargoNeeds = {}, industryInitialized = true }
 local nextTime = 0
@@ -33,13 +33,12 @@ function data()
 			local time = game.interface.getGameTime().time
 			if time < nextTime then return end
 			nextTime = time + 10
-			if game.config._IIF_TownSpawning == 1 then scanIndustries() end
-			if not game.config._IIF_TownTuning then towns.updateTownGoods(state) end
+			if game.config._IndonesiaFever_TownSpawning == 1 then scanIndustries() end
+			if not game.config._IndonesiaFever_TownTuning then towns.updateTownGoods(state) end
 		end,
 		guiUpdate = function() end,
 		save = function() return state end,
 		load = function(saved)
-			towns.reset()
 			towns.reset()
 			state = type(saved) == "table" and saved or {}
 			state.industryTowns = state.industryTowns or {}

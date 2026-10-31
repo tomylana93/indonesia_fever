@@ -1,12 +1,6 @@
-local industries = require "iif_industries"
+local util = require "indonesia_fever_util"
+local industries = require "indonesia_fever_industries"
 local callbacks = {}
-
-local function copy(value)
-	if type(value) ~= "table" then return value end
-	local result = {}
-	for k, v in pairs(value) do result[k] = copy(v) end
-	return result
-end
 
 local function bucket(fileName, seed, salt)
 	local hash = (tonumber(seed) or 0) % 104729
@@ -21,8 +15,8 @@ function callbacks.constructionCallback(fileName, data)
 		data.updateFn = function(params)
 			-- Never alter the engine's parameter table or reseed the shared RNG.
 			local config = game and game.config or {}
-			if config._IIF_TownTuning then return original(params) end
-			local adjusted = copy(params)
+			if config._IndonesiaFever_TownTuning then return original(params) end
+			local adjusted = util.copy(params)
 			local cargoTypes = adjusted.cargoTypes or {}
 			local residential = data.townBuildingParams and data.townBuildingParams.landUseType == "RESIDENTIAL"
 			if residential and bucket(fileName, params.seed, 1) < 33 then
@@ -116,7 +110,7 @@ local function extend(configs, modern)
 			local alternatives = families[(entry.type or ""):upper()] or {}
 			for _, cargo in ipairs(alternatives) do
 				if not present[cargo] and (entry.capacity or 0) > 0 then
-					local alternative = copy(configs[i])
+					local alternative = util.copy(configs[i])
 					local target = modern and alternative.cargoEntries or alternative
 					target[1].type = cargo
 					configs[#configs + 1], present[cargo] = alternative, true

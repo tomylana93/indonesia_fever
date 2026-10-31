@@ -2,7 +2,7 @@ function data()
 	return {
 		en = {
 			["mod_name"] = "Indonesia Fever",
-			["mod_desc"] = "A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n- Indonesian Name Generator (Towns, Streets, Persons)\n- Custom Map Generators for tropical, temperate, and desert maps\n- Tropical Rivers & Meandering\n- Historical Vehicle Availability Filter\n- Configurable Infrastructure Years for tram catenary, rail electrification, and bus lanes\n- Three era-specific road depots based on the base-game depot model\n- Optional base game animal spawning toggle\n- Earn Achievements with mods\n- Industry Button enabled\n- Included industry system with Indonesian cargo and industry chains (1850-present), based on Yeol's Senseless Industries\n\nCredits:\n- Signal model (ATP_Standart signal Daop 2 Indonesia): DFN\n- Industry system: Yeol the Clumsy\n- Industry cargo models and textures: Klorid, jay_",
+			["mod_desc"] = "A mod focused on Indonesian-themed content for Transport Fever 2.\n\nFeatures:\n- Indonesian Name Generator (Towns, Streets, Persons)\n- Historical Vehicle Availability Filter\n- Configurable Infrastructure Years for tram catenary, rail electrification, and bus lanes\n- Three era-specific road depots based on the base-game depot model\n- Optional wildlife spawning toggle\n- Earn Achievements with mods\n- Industry Button enabled\n- Included industry system with Indonesian cargo and industry chains (1850-present), based on Yeol's Senseless Industries\n\nCredits:\n- Signal model (ATP_Standart signal Daop 2 Indonesia): DFN\n- Industry system: Yeol the Clumsy\n- Industry cargo models and textures: Klorid, jay_",
 			["param_val_default"] = "Default",
 			["param_val_default_tram"] = "Default (1875)",
 			["param_historical_tram"] = "Tram Catenary Era",
@@ -20,7 +20,7 @@ function data()
 			["param_val_historical"] = "Historical",
 			["tooltip_vehicle_set"] = "Select the set of available vehicles. 'Historical' filters base game vehicles to match a historical Indonesian context.",
 			["param_spawn_animals"] = "Animal Spawning",
-			["tooltip_spawn_animals"] = "Enable or disable base game wild animals from spawning on the map.",
+			["tooltip_spawn_animals"] = "Off sets wildlife population density to zero, including mod animals using the game spawning system. On keeps the game or other mods' density. Existing animals are not explicitly removed.",
 			["On"] = "On",
 			["Off"] = "Off",
 			["No"] = "No",
@@ -237,7 +237,7 @@ function data()
 		},
 		id = {
 			["mod_name"] = "Indonesia Fever",
-			["mod_desc"] = "Mod konten bertema Indonesia untuk Transport Fever 2.\n\nFitur:\n- Generator Nama Indonesia (Kota, Jalan, Orang)\n- Generator Peta Khusus untuk peta tropis, sedang, dan gurun\n- Sungai Tropis & Aliran Berkelok\n- Filter Ketersediaan Kendaraan Historis\n- Tahun Infrastruktur yang Dapat Diatur untuk katenari trem, elektrifikasi rel, dan jalur bus\n- Tiga depo jalan khusus era berdasarkan model depo bawaan\n- Tombol aktif/nonaktif kemunculan hewan bawaan\n- Raih Pencapaian dengan mod\n- Tombol Industri aktif\n- Sistem industri bawaan dengan rantai kargo dan industri Indonesia (1850-present), berdasarkan Senseless Industries karya Yeol\n\nKredit:\n- Model sinyal (ATP_Standart signal Daop 2 Indonesia): DFN\n- Sistem industri: Yeol the Clumsy\n- Model dan tekstur kargo industri: Klorid, jay_",
+			["mod_desc"] = "Mod konten bertema Indonesia untuk Transport Fever 2.\n\nFitur:\n- Generator Nama Indonesia (Kota, Jalan, Orang)\n- Filter Ketersediaan Kendaraan Historis\n- Tahun Infrastruktur yang Dapat Diatur untuk katenari trem, elektrifikasi rel, dan jalur bus\n- Tiga depo jalan khusus era berdasarkan model depo bawaan\n- Tombol aktif/nonaktif kemunculan hewan liar\n- Raih Pencapaian dengan mod\n- Tombol Industri aktif\n- Sistem industri bawaan dengan rantai kargo dan industri Indonesia (1850-present), berdasarkan Senseless Industries karya Yeol\n\nKredit:\n- Model sinyal (ATP_Standart signal Daop 2 Indonesia): DFN\n- Sistem industri: Yeol the Clumsy\n- Model dan tekstur kargo industri: Klorid, jay_",
 			["param_val_default"] = "Bawaan",
 			["param_val_default_tram"] = "Bawaan (1875)",
 			["param_historical_tram"] = "Era Katenari Trem",
@@ -255,7 +255,7 @@ function data()
 			["param_val_historical"] = "Historis",
 			["tooltip_vehicle_set"] = "Pilih set kendaraan yang tersedia. 'Historis' menyaring kendaraan bawaan agar sesuai konteks Indonesia.",
 			["param_spawn_animals"] = "Kemunculan Hewan",
-			["tooltip_spawn_animals"] = "Aktifkan atau nonaktifkan kemunculan hewan liar bawaan di peta.",
+			["tooltip_spawn_animals"] = "Nonaktif mengatur kepadatan hewan liar menjadi nol, termasuk hewan mod yang memakai sistem spawn game. Aktif mempertahankan kepadatan game atau mod lain. Hewan yang sudah ada tidak dihapus secara eksplisit.",
 			["On"] = "Aktif",
 			["Off"] = "Nonaktif",
 			["No"] = "Tidak",

@@ -1,15 +1,8 @@
-local industries = require "iif_industries"
+local util = require "indonesia_fever_util"
+local industries = require "indonesia_fever_industries"
 local towns = {}
 local pending = {}
 local cursor = 1
-
-local function equal(a, b)
-	if type(a) ~= type(b) then return false end
-	if type(a) ~= "table" then return a == b end
-	for k, v in pairs(a) do if not equal(v, b[k]) then return false end end
-	for k in pairs(b) do if a[k] == nil then return false end end
-	return true
-end
 
 local demands = {
 	{ cargo = "COMMERCIAL_GOODS", district = 2, year = 1850, population = 0 },
@@ -63,7 +56,7 @@ function towns.updateTownGoods(state)
 		if capacities and #capacities >= 3 and not pending[id] then
 			local population = (capacities[1] + capacities[2] + capacities[3]) / 3
 			local desired = needsFor(population, year, indices, state.townsCargoNeeds[id])
-			if not equal(desired, state.townsCargoNeeds[id]) then
+			if not util.equal(desired, state.townsCargoNeeds[id]) then
 				pending[id] = true
 				api.cmd.sendCommand(api.cmd.make.instantlyUpdateTownCargoNeeds(id, desired), function(_, success)
 					pending[id] = nil

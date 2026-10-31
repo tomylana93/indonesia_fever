@@ -24,6 +24,65 @@ end
 check('all Lua and asset data parse', function()
 	for _, path in ipairs(SYNTAX_FILES) do assert(loadfile(path), path) end
 end)
+check('animal option changes density without filtering models', function()
+	local oldGame, oldId, oldFilter, oldModifier = game, getCurrentModId, addFileFilter, addModifier
+	local ok, err = pcall(function()
+		getCurrentModId = function() return 'indonesia_fever' end
+		addFileFilter = function() error('animal option must not filter resource files') end
+		addModifier = function() end
+		for _, option in ipairs({ 0, 1, 'missing', 'no-mod-params' }) do
+			game = { config = { animal = { populationDensityMultiplier = 2.5, useLocalSpawning = true } } }
+			local mod = readData('mod.lua')
+			local params = {
+				indonesia_fever = option == 'missing' and {} or { spawn_animals = option },
+			}
+			if option == 'no-mod-params' then params = nil end
+			mod.runFn({}, params)
+			assert(game.config.animal.populationDensityMultiplier == (option == 1 and 0 or 2.5))
+			assert(game.config.animal.useLocalSpawning == true)
+		end
+	end)
+	game, getCurrentModId, addFileFilter, addModifier = oldGame, oldId, oldFilter, oldModifier
+	assert(ok, err)
+end)
+check('historical vehicle filters keep exact names and allow other mods', function()
+	local oldFilter = addFileFilter
+	local filters = {}
+	addFileFilter = function(kind, fn) filters[kind] = fn end
+	local ok, err = pcall(function() require('indonesia_fever_vehicle_filter').install() end)
+	addFileFilter = oldFilter
+	assert(ok, err)
+	for _, case in ipairs({
+		{ kind = 'model/vehicle', prefix = 'res/models/model/vehicle/', name = 'horse_cart_as_1850.mdl' },
+		{ kind = 'multipleUnit', prefix = 'res/config/multiple_unit/', name = 'ice1.lua' },
+	}) do
+		local filter = assert(filters[case.kind])
+		assert(filter(case.prefix .. case.name))
+		assert(not filter(case.prefix .. 'unlisted_' .. case.name))
+		assert(not filter(case.prefix .. case.name .. '.bak'))
+		assert(filter('mods/another_mod/' .. case.prefix .. 'unlisted.mdl'))
+	end
+end)
+check('shared table helpers isolate nested changes and compare full contents', function()
+	local util = require 'indonesia_fever_util'
+	local original = { nested = { value = 7 }, enabled = false }
+	local copied = util.copy(original)
+	assert(util.equal(original, copied))
+	copied.nested.value = 8
+	assert(original.nested.value == 7 and not util.equal(original, copied))
+	assert(not util.equal({}, { enabled = false }))
+	assert(not util.equal(1, '1'))
+end)
+check('all mod option labels exist in both languages', function()
+	local labels = readData('strings.lua')
+	for _, param in ipairs(readData('mod.lua').info.params) do
+		for _, locale in ipairs({ 'en', 'id' }) do
+			assert(labels[locale][param.name], param.name)
+			assert(labels[locale][param.tooltip], param.tooltip)
+			for _, value in ipairs(param.values) do assert(labels[locale][value], value) end
+		end
+	end
+end)
 local catalog = {}
 check('all industries load with installed industryutil', function()
 	for _, path in ipairs(INDUSTRY_FILES) do
@@ -33,7 +92,7 @@ check('all industries load with installed industryutil', function()
 		assert(result.rule and result.stocks and #result.models > 0, path)
 	end
 end)
-local cb = require 'iif_callbacks'
+local cb = require 'indonesia_fever_callbacks'
 check('foreign industry is unchanged', function()
 	local con = { type = 'INDUSTRY', updateFn = function() return { rule = { capacity = 100 } } end }
 	local original = con.updateFn
@@ -241,7 +300,7 @@ check('legacy and modern vehicle alternatives are idempotent and compartment-loc
 		else assert(#vehicle.metadata.transportVehicle.compartments[2] == 1) end
 	end
 end)
-local townModule = require 'iif_towns'
+local townModule = require 'indonesia_fever_towns'
 local function townFixture(year, population, success)
 	local ids, byId = {}, {}
 	for _, path in ipairs(CARGO_FILES) do local cargo = readData(path); ids[#ids + 1] = cargo.id; byId[cargo.id] = cargo end
@@ -298,7 +357,7 @@ check('save load never rebuilds industries and disabled spawning avoids scans', 
 	townFixture(1850, 100, true)
 	game.interface.upgradeConstruction = function() error('unsafe industry rebuild') end
 	game.interface.getEntities = function() error('unnecessary construction scan') end
-	local script = readData('res/config/game_script/iif_industry.lua')
+	local script = readData('res/config/game_script/indonesia_fever_industry.lua')
 	script.load({ industryInitialized = false, industryTowns = { 100 } })
 	script.update()
 	local saved = script.save()

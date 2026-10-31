@@ -1,4 +1,4 @@
-local iifCB = require "iif_callbacks"
+local callbacks = require "indonesia_fever_callbacks"
 
 local callbacksInstalled = false
 
@@ -100,33 +100,26 @@ function data()
 					game.config.busLaneYearFrom = 2004
 				end
 
-				-- Animal spawn control
+				-- https://www.wiki.transportfever2.com/doku.php?id=modding:baseconfig
+				-- Zero density disables wildlife spawning without hiding models.
 				if params.spawn_animals == 1 then
-					addFileFilter("model/animal", function(fileName)
-						if fileName:match("^res/models/model/animal/") then
-							return false
-						end
-						return true
-					end)
+					game.config.animal.populationDensityMultiplier = 0
 				end
 
 				-- Load vehicle filter script if Indonesian (Historical) is selected
 				if params.vehicle_set == 1 then
-					local vehicleFilter = require "vehicle_filter"
-					if vehicleFilter and vehicleFilter.data then
-						vehicleFilter.data().runFn(settings, modParams)
-					end
+					require("indonesia_fever_vehicle_filter").install()
 				end
 
-				game.config._IIF_TownSpawning = params.townspawning or 0
+				game.config._IndonesiaFever_TownSpawning = params.townspawning or 0
 			else
-				game.config._IIF_TownSpawning = 0
+				game.config._IndonesiaFever_TownSpawning = 0
 			end
 
 			if not callbacksInstalled then
-				if iifCB.constructionCallback and iifCB.vehicleCallback then
-					addModifier("loadModel", iifCB.vehicleCallback)
-					addModifier("loadConstruction", iifCB.constructionCallback)
+				if callbacks.constructionCallback and callbacks.vehicleCallback then
+					addModifier("loadModel", callbacks.vehicleCallback)
+					addModifier("loadConstruction", callbacks.constructionCallback)
 					callbacksInstalled = true
 				else
 					print("Indonesia Fever ERROR: callbacks are not reachable")
@@ -135,12 +128,12 @@ function data()
 		end,
 		postRunFn = function(settings, modParams)
 			-- Disable the town cargo mechanism when the "Town Tuning" mod is present.
-			game.config._IIF_TownTuning = nil
+			game.config._IndonesiaFever_TownTuning = nil
 			for key1, value1 in pairs(modParams or {}) do
 				if type(value1) == "table" then
 					for key2, value2 in pairs(value1) do
 						if key2 == "fasterTownDevelopInterval" then
-							game.config._IIF_TownTuning = 1
+							game.config._IndonesiaFever_TownTuning = 1
 							print("Indonesia Fever: Town Tuning mod found, town cargo mechanism disabled")
 						end
 					end
