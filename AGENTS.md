@@ -6,6 +6,13 @@
 - The former `indonesia_fever_1.code-workspace` has been removed. Do not assume a sibling `base_game` checkout exists.
 - Use the installed game and Workshop reference paths below as read-only sources unless the user explicitly asks to modify them.
 
+## IT Worklog Exclusion
+
+- At the user's explicit request, do not record work on this project in the IT worklog. This repository-specific opt-out overrides automatic host-wide logging for this project and applies across sessions and agents.
+- Do not create local worklog sessions, pending plans, queue entries, or Google Sheets rows for project work, including implementation, maintenance, validation, commits, and pushes.
+- Preserve existing historical worklog records. Do not delete or change them unless the user explicitly requests it.
+- Record a task only if the user explicitly requests logging for that task or revokes this project-wide exclusion.
+
 ## Paths on This Host
 
 Verified on 31 October 2026. This host uses the Steam snap installation, not `~/.local/share/Steam`.
