@@ -1,0 +1,100 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 0.90876293182373, 0.83867657184601, 1.4757733345032, },
+		bbMin = { -0.8972230553627, -0.898561835289, 0.18209140002728, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 0.90299296379089, 0.8686192035675, 0.64684098958969, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/cans.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_foodBox_lod0.msh",
+						name = "jay_mesh_foodBox",
+						transf = { 1.0698393583298, -0.018545586615801, 0, 0, 0.018545586615801, 1.0698393583298, 0, 0, -0, 0, 1.0700000524521, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/cans.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_cans_lod0.msh",
+						name = "jay_mesh_cans",
+						transf = { -0.024024276062846, -0.96970242261887, 0, 0, 0.96970242261887, -0.024024276062846, 0, 0, 0, 0, 0.97000002861023, 0, -0.59385859966278, 0.14884907007217, 0.37000000476837, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/Pallet.mtl", },
+						mesh = "industry/cargo/cargo/pallet_lod0.msh",
+						name = "pallet",
+						transf = { 1, 0, 0, 0, 0, 1, -1.6292067073209e-07, 0, 0, 1.6292067073209e-07, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 50.081024169922,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/cans.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_foodBox_lod1.msh",
+						name = "jay_mesh_foodBox",
+						transf = { 1.0698393583298, -0.018545586615801, 0, 0, 0.018545586615801, 1.0698393583298, 0, 0, -0, 0, 1.0700000524521, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/cans.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_cans_lod0.msh",
+						name = "jay_mesh_cans",
+						transf = { -0.024024276062846, -0.96970242261887, 0, 0, 0.96970242261887, -0.024024276062846, 0, 0, 0, 0, 0.97000002861023, 0, -0.59385859966278, 0.14884907007217, 0.37000000476837, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/Pallet.mtl", },
+						mesh = "industry/cargo/cargo/pallet_lod0.msh",
+						name = "pallet",
+						transf = { 1, 0, 0, 0, 0, 1, -1.6292067073209e-07, 0, 0, 1.6292067073209e-07, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 50.081024169922,
+			visibleTo = 120.08102416992,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/cans.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_foodBox_lod1.msh",
+						name = "jay_mesh_foodBox",
+						transf = { 1.0698393583298, -0.018545586615801, 0, 0, 0.018545586615801, 1.0698393583298, 0, 0, -0, 0, 1.0700000524521, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/Pallet.mtl", },
+						mesh = "industry/cargo/cargo/pallet_lod0.msh",
+						name = "pallet",
+						transf = { 1, 0, 0, 0, 0, 1, -1.6292067073209e-07, 0, 0, 1.6292067073209e-07, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 120.08102416992,
+			visibleTo = 450.08102416992,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

@@ -1,0 +1,44 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 0.93331718444824, 1.005054473877, 1.9202762842178, },
+		bbMin = { -0.93331718444824, -0.98609352111816, 0, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 0.93331718444824, 0.99557399749756, 0.96013814210892, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						children = {
+							{
+								materials = { "industry/cargo/cargo_items_04.mtl", },
+								mesh = "industry/cargo/pallet_lod0.msh",
+								name = "pallet",
+								transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+							},
+						},
+						materials = { "industry/cargo/cargo_items_03_copper.mtl", },
+						mesh = "industry/cargo/steel_small/cargo_steel_lod0.msh",
+						name = "cargo_steel",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 474.10083007813,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

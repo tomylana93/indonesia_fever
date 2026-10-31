@@ -1,0 +1,62 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 1, 0.97459411621094, 1.6809027194977, },
+		bbMin = { -1, -0.97459411621094, 0.0029170708730817, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 1, 0.97459411621094, 0.83899283409119, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						children = {
+						
+					{
+						materials = { "industry/farm/hay_001.mtl", },
+						mesh = "industry/farm/hay_flat_2/hay_flat_2_lod0.msh",
+						name = "hay_flat_2",
+						transf = { 0.7, 0, 0, 0, 0, 0.7, 0, 0, 0, 0, 1, 0, 0, 0.4, 0.22, 1, },
+					},				
+					
+					{
+						materials = { "industry/cargo/cargo_items_04.mtl", },
+						mesh = "industry/cargo/pallet_lod0.msh",
+						name = "pallet",
+						transf = { 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},					
+					{
+						materials = { "industry/farm/hay_001.mtl", },
+						mesh = "industry/farm/hay_cube/hay_cube_lod0.msh",
+						name = "hay_cube",
+						transf = { 1, 0, 0, 0, 0, 0.7, 0, 0, 0, 0, 1, 0, 0.1, 0, 0.2, 1, },
+					},
+					{
+						materials = { "industry/farm/hay_001.mtl", },
+						mesh = "industry/farm/hay_cube/hay_cube_lod0.msh",
+						name = "hay_cube",
+						transf = { 0.8, 0.3, 0, 0, -0.3, 0.6, 0, 0, 0, 0, 1, 0, 0, 0, 0.88, 1, },
+					},
+						},
+						name = "cargo_slag",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 474.77325439453,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

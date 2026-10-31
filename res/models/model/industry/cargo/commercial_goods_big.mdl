@@ -1,0 +1,42 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 4.9450616836548, 1.9199693202972, 1.8044463396072, },
+		bbMin = { -4.9175539016724, -2.0188238620758, -1.7505736593648e-07, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 4.9313077926636, 1.9693965911865, 0.90222322940826, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/Pallet.mtl", },
+						mesh = "industry/cargo/cargoBig2/jay_mesh_palletsBig_lod0.msh",
+						name = "jay_mesh_palletsBig",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/commercial_goods.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_electronicsBig_lod0.msh",
+						name = "jay_mesh_electronicsBig",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.0073146820068, 1.0151189565659, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 1326.7712402344,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

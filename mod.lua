@@ -1,7 +1,11 @@
+local iifCB = require "iif_callbacks"
+
+local callbacksInstalled = false
+
 function data()
 	return {
 		info = {
-			minorVersion = 0,
+			minorVersion = 1,
 			severityAdd = "WARNING",
 			severityRemove = "CRITICAL",
 			name = _("mod_name"),
@@ -10,9 +14,26 @@ function data()
 				{
 					name = "tomylana93",
 					role = "CREATOR",
+					text = "Indonesia Fever project",
+				},
+				{
+					name = "Yeol the Clumsy",
+					role = "CO-CREATOR",
+					text = "Original Senseless Industries 2.21a industry system",
+					tfnetId = "37578",
+				},
+				{
+					name = "Klorid",
+					role = "CO-CREATOR",
+					text = "Cargo models and textures",
+				},
+				{
+					name = "jay_",
+					role = "CO-CREATOR",
+					text = "Cargo models and textures",
 				},
 			},
-			tags = { "script mod", "indonesia" },
+			tags = { "script mod", "indonesia", "industry" },
 			params = {
 				{
 					key = "historical_tram_electrification",
@@ -49,6 +70,13 @@ function data()
 					values = { _("On"), _("Off") },
 					defaultIndex = 0,
 				},
+				{
+					key = "townspawning",
+					name = _("TOWN_SPAWNING"),
+					tooltip = _("TOWN_SPAWNING_TOOLTIP"),
+					values = { _("No"), _("Yes") },
+					defaultIndex = 0,
+				},
 			},
 			visible = true,
 		},
@@ -59,7 +87,7 @@ function data()
 			game.config.earnAchievementsWithMods = true
 			game.config.industryButton = true
 
-			local params = modParams[getCurrentModId()]
+			local params = modParams and modParams[getCurrentModId()]
 
 			if params then
 				if params.historical_tram_electrification == 1 then
@@ -89,10 +117,35 @@ function data()
 						vehicleFilter.data().runFn(settings, modParams)
 					end
 				end
+
+				game.config._IIF_TownSpawning = params.townspawning or 0
+			else
+				game.config._IIF_TownSpawning = 0
+			end
+
+			if not callbacksInstalled then
+				if iifCB.constructionCallback and iifCB.vehicleCallback then
+					addModifier("loadModel", iifCB.vehicleCallback)
+					addModifier("loadConstruction", iifCB.constructionCallback)
+					callbacksInstalled = true
+				else
+					print("Indonesia Fever ERROR: callbacks are not reachable")
+				end
 			end
 		end,
 		postRunFn = function(settings, modParams)
-			-- Post-initialization logic here
+			-- Disable the town cargo mechanism when the "Town Tuning" mod is present.
+			game.config._IIF_TownTuning = nil
+			for key1, value1 in pairs(modParams or {}) do
+				if type(value1) == "table" then
+					for key2, value2 in pairs(value1) do
+						if key2 == "fasterTownDevelopInterval" then
+							game.config._IIF_TownTuning = 1
+							print("Indonesia Fever: Town Tuning mod found, town cargo mechanism disabled")
+						end
+					end
+				end
+			end
 		end,
 	}
 end

@@ -1,0 +1,59 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 4.9171934127808, 2.3556816577911, 3.3097286224365, },
+		bbMin = { -4.7549991607666, -1.9056341648102, 0.0014882683753967, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 4.8360962867737, 2.1306579113007, 1.6541202068329, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/cargoContainer.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_cargoContainerBig_lod0.msh",
+						name = "jay_mesh_cargoContainerBig",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.8571026325226, -1.00159740448, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/tires.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_wheelsBig_lod0.msh",
+						name = "jay_mesh_wheelsBig",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.8872880935669, 0.7280051112175, -0.29133185744286, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 144.08102416992,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/cargoContainer.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_cargoContainerBig_lod0.msh",
+						name = "jay_mesh_cargoContainerBig",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.8571026325226, -1.00159740448, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 144.08102416992,
+			visibleTo = 444.08102416992,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

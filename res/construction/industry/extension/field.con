@@ -1,0 +1,283 @@
+local constructionutil = require "constructionutil"
+local transf = require "transf"
+local vec3 = require "vec3"
+
+function data()
+
+local borderTrees = {"tree/european_linden.mdl", "tree/shingle_oak.mdl" } --, "tree/red_delicious_apple.mdl"}
+local noYes = { _("no"), _("yes") }
+local fillMaterials = { "shared/wheat.gtex.lua", "shared/soil.gtex.lua", "shared/corn.gtex.lua", "shared/field_grass.gtex.lua" }
+local animals = { 
+	{ models = { "animal/cow.mdl", "animal/cow_2.mdl" }, density = 0.004 },
+	{ models = { "animal/cow.mdl", "animal/cow_2.mdl" }, density = 0.004 },
+	{ models = { "animal/cow.mdl", "animal/cow_2.mdl" }, density = 0.004 },
+	{ models = { "animal/cow.mdl", "animal/cow_2.mdl" }, density = 0.004 },
+	{ models = { "animal/sheep.mdl" }, density = 0.006 },
+	{ models = { "animal/sheep.mdl" }, density = 0.006 },
+	{ models = { "animal/horse.mdl" }, density = 0.002 },
+	{ models = { }, density = 0 },
+	{ models = { }, density = 0 },
+}
+
+local function makeParams()
+	return {
+		{
+			key = "path1",
+			name = "path1",
+			values = noYes,
+		},
+		{
+			key = "path2",
+			name = "path2",
+			values = noYes,
+		},
+		{
+			key = "path3",
+			name = "path3",
+			values = noYes,
+		},
+		{
+			key = "path4",
+			name = "path4",
+			values = noYes,
+		},
+		{
+			key = "trees1",
+			name = "trees1",
+			values = noYes,
+		},
+		{
+			key = "trees2",
+			name = "trees2",
+			values = noYes,
+		},
+		{
+			key = "trees3",
+			name = "trees3",
+			values = noYes,
+		},
+		{
+			key = "trees4",
+			name = "trees4",
+			values = noYes,
+		},
+	}
+end
+
+return { 
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Field"),			
+		description = _("Field")
+	},
+	availability = {
+		yearFrom = 1825,
+		yearTo = 1826,
+	},
+	order = 100,
+	skipCollision = false,
+	autoRemovable = true,
+	params = makeParams(),
+	
+	updateFn = function(params)
+	
+		local treeBorderOffset = 3
+		local treeOffset = 10
+
+		math.randomseed(params.seed)
+		local size = params.faceSize
+
+		local fillMat = fillMaterials[math.random(1, #fillMaterials)]
+
+		local halfExtend = { size[1] / 2, size[2] / 2 }
+
+		local extend = {
+			halfExtend[1], -halfExtend[1],
+			halfExtend[2], -halfExtend[2],
+		}
+
+		local pathDist = 6
+		local contentDist = 4
+
+		local fieldExtend = {
+			halfExtend[1] - pathDist, -halfExtend[1] + pathDist,
+			halfExtend[2] - pathDist, -halfExtend[2] + pathDist,
+		}
+
+		if params.trees4 == 1 then
+			fieldExtend[1] = fieldExtend[1] - treeBorderOffset * 2
+		end
+		if params.trees3 == 1 then
+			fieldExtend[2] = fieldExtend[2] + treeBorderOffset * 2
+		end
+		if params.trees2 == 1 then
+			fieldExtend[3] = fieldExtend[3] - treeBorderOffset * 2
+		end
+		if params.trees1 == 1 then
+			fieldExtend[4] = fieldExtend[4] + treeBorderOffset * 2
+		end
+
+		local fieldContentExtend = {
+			fieldExtend[1] - contentDist, fieldExtend[2] + contentDist,
+			fieldExtend[3] - contentDist, fieldExtend[4] + contentDist,
+		}
+
+		local result = { }
+		result.groundFaces = { }
+		result.models = { }
+
+		local fieldContentSize = { fieldContentExtend[1] - fieldContentExtend[2], fieldContentExtend[3] - fieldContentExtend[4] }
+
+		local fieldFace = {
+			{ fieldExtend[2] , fieldExtend[4], 0 },
+			{ fieldExtend[1] , fieldExtend[4], 0 },
+			{ fieldExtend[1] , fieldExtend[3], 0 },
+			{ fieldExtend[2] , fieldExtend[3], 0 },
+		}
+
+		-- add animals
+		if fillMat == "shared/field_grass.gtex.lua" then
+			local animalSet = animals[math.random(#animals)]
+			local animalModels = animalSet.models
+
+			if #animalModels > 0 then
+				local count = fieldContentSize[1] * fieldContentSize[2] * animalSet.density
+				local positions = { }
+				for i=1, count do
+					local p = vec3.new(fieldContentExtend[2] + fieldContentSize[1] * math.random(), 
+							fieldContentExtend[4] + fieldContentSize[2] * math.random(), .0)
+					local col = false
+					for j=1, #positions do
+						if vec3.distance(p, positions[j]) < 4 then
+							col = true
+							break
+						end
+					end
+					if (not col) then
+						positions[#positions + 1] = p
+					end
+				end
+
+				for i=1, #positions do
+					result.models[#result.models + 1] = {
+						id = animalModels[math.random(#animalModels)],
+						transf = transf.scaleRotZTransl(
+							0.9 + math.random() * 0.1, 
+							math.random() * 1000, 
+							positions[i]),
+					}
+				end
+			end
+
+			constructionutil.makeFence(fieldFace, "industry/farm/fence.mdl", 4, true, result.models)
+		end
+		
+		result.groundFaces[#result.groundFaces + 1] = {
+			face = fieldFace,
+			modes = {
+				{ type = "FILL", key = fillMat },
+				{ type = "STROKE_OUTER", key = "shared/field_border.gtex.lua" }
+			},
+		}
+		
+		if params.path1 ~= 0 then
+			result.groundFaces[#result.groundFaces + 1] = {
+				face = {
+					{ extend[1], extend[4], 0, 0 },
+					{ extend[1], extend[3], 0, 0 },
+				},
+				modes = {
+					{ type = "STROKE", key = "shared/path.gtex.lua" }
+				},
+				loop = false,
+			}
+		end
+		if params.path2 ~= 0 then
+			result.groundFaces[#result.groundFaces + 1] = {
+				face = {
+					{ extend[2], extend[4], 0, 0 },
+					{ extend[2], extend[3], 0, 0 },
+				},
+				modes = {
+					{ type = "STROKE", key = "shared/path.gtex.lua" }
+				},
+				loop = false,
+			}
+		end
+		if params.path3 ~= 0 then
+			result.groundFaces[#result.groundFaces + 1] = {
+				face = {
+					{ extend[1], extend[3], 0, 0 },
+					{ extend[2], extend[3], 0, 0 },
+				},
+				modes = {
+					{ type = "STROKE", key = "shared/path.gtex.lua" }
+				},
+				loop = false,
+			}
+		end
+		if params.path4 ~= 0 then
+			result.groundFaces[#result.groundFaces + 1] = {
+				face = {
+					{ extend[1], extend[4], 0, 0 },
+					{ extend[2], extend[4], 0, 0 },
+				},
+				modes = {
+					{ type = "STROKE", key = "shared/path.gtex.lua" }
+				},
+				loop = false,
+			}
+		end
+
+		local function addTreeRow(models, startPos, dir, count)
+			for i = 0, count-1 do
+				local pos = { startPos[1] + dir[1] * i, startPos[2] + dir[2] * i }
+				pos[1] = pos[1] + (math.random() - 0.5) * 2
+				pos[2] = pos[2] + (math.random() - 0.5) * 2
+				local model = models[math.random(#models)]
+				result.models[#result.models + 1] = {
+					id = model,
+					transf = transf.scaleRotZTransl(0.9 + math.random() * 0.1, math.random() * 1000, vec3.new(pos[1], pos[2], .0)),
+				}
+			end
+		end
+
+		local halfRange = { halfExtend[1] - pathDist, halfExtend[2] - pathDist }
+
+		local y0Offset = params.trees1 == 1 and treeOffset or 0
+		local y1Offset = params.trees2 == 1 and treeOffset or 0
+
+		if params.trees1 == 1 then
+			local from = { -halfRange[1], -halfRange[2] }
+			local to = { halfRange[1], -halfRange[2] }
+			local segments = math.ceil((to[1] - from[1]) / treeOffset)
+			local step = { (to[1] - from[1]) / segments, (to[2] - from[2]) / segments }
+			addTreeRow(borderTrees, from, step, segments + 1)
+		end
+		if params.trees2 == 1 then
+			local from = { -halfRange[1], halfRange[2] }
+			local to = { halfRange[1], halfRange[2] }
+			local segments = math.ceil((to[1] - from[1]) / treeOffset)
+			local step = { (to[1] - from[1]) / segments, (to[2] - from[2]) / segments }
+			addTreeRow(borderTrees, from, step, segments + 1)
+		end
+		if params.trees3 == 1 then
+			local from = { -halfRange[1], -halfRange[2] + y0Offset }
+			local to = { -halfRange[1], halfRange[2] - y1Offset }
+			local segments = math.ceil((to[2] - from[2]) / treeOffset)
+			local step = { (to[1] - from[1]) / segments, (to[2] - from[2]) / segments }
+			addTreeRow(borderTrees, from, step, segments + 1)
+		end
+		if params.trees4 == 1 then
+			local from = { halfRange[1], -halfRange[2] + y0Offset }
+			local to = { halfRange[1], halfRange[2] - y1Offset }
+			local segments = math.ceil((to[2] - from[2]) / treeOffset)
+			local step = { (to[1] - from[1]) / segments, (to[2] - from[2]) / segments }
+			addTreeRow(borderTrees, from, step, segments + 1)
+		end
+		
+		return result
+	end
+}
+
+end

@@ -1,0 +1,54 @@
+function data()
+return {
+	matConfigs = {
+		{ 0, }, 
+	},
+	subMeshes = {
+		{
+			indices = {
+				normal = {
+					count = 336,
+					offset = 376,
+				},
+				position = {
+					count = 336,
+					offset = 712,
+				},
+				tangent = {
+					count = 336,
+					offset = 1048,
+				},
+				uv0 = {
+					count = 336,
+					offset = 1384,
+				},
+			},
+			materials = {
+				"vehicle/car/car_corolla.mtl", 
+			},
+		}, 
+	},
+	vertexAttr = {
+		normal = {
+			count = 72,
+			numComp = 3,
+			offset = 0,
+		},
+		position = {
+			count = 192,
+			numComp = 3,
+			offset = 72,
+		},
+		tangent = {
+			count = 80,
+			numComp = 4,
+			offset = 264,
+		},
+		uv0 = {
+			count = 32,
+			numComp = 2,
+			offset = 344,
+		},
+	},
+}
+end

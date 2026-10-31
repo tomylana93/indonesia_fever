@@ -1,0 +1,35 @@
+function data()
+    return {
+        boundingInfo = {  },
+        collider = {
+            params = {  },
+            type = "MESH"
+        },
+        lods = {
+            {
+                animations = {  },
+                events = {  },
+                node = {
+                    children = {
+                        {
+                            materials = {
+                                "industry/saw_mill/roof_1.mtl",
+                                "industry/saw_mill/trim_1.mtl",
+                                "industry/saw_mill/wall_2.mtl"
+                            },
+                            mesh = "industry/saw_mill/lod_0_main_building_extension.msh",
+                            transf = { 1.25, 0, 0, 0, 0, 1.25, 0, 0, 0, 0, 1.25, 0, 0, 0, 0, 1 }
+                        }
+                    },
+                    name = "RootNode",
+                    transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 }
+                },
+                static = false,
+                visibleFrom = 0,
+                visibleTo = 2250
+            }
+        },
+        metadata = {  },
+        version = 1
+    }
+end

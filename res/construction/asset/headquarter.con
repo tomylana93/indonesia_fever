@@ -1,0 +1,157 @@
+local constructionutil = require "constructionutil" --Yeol
+local vec3 = require "vec3"
+local vec2 = require "vec2"
+local transf = require "transf"
+local colliderutil = require "colliderutil" --Yeol
+
+local function makeParams()
+	result = {}
+--[[	result[#result + 1] = {
+		key = "TBCR",
+		name = ("town building consumption rate"),
+		values = { ("normal"), ("slow"), },  defaultIndex = 0
+		}
+]]
+	return result
+end
+
+
+function data()
+
+return { 
+	type = "INDUSTRY", -- Yeol, was type="NONE"
+	description = {
+		name = _("Headquarter"),			
+		description = _("Build your own Headquarter")
+	},
+	availability = {
+		yearFrom = -1,	-- Yeol, was 1825
+		yearTo = -1,		-- Yeol, new
+	},
+	categories = { "misc" },
+	order = 100,
+	skipCollision = false,
+	autoRemovable = false,
+	params = makeParams(),
+	updateFn = function(params)
+		
+		local fillKey = "industry_gravel_small_01"
+		local result = { }
+		local groundFace = { }
+		
+		local size = 15
+		local offset = 13
+		local modelTransf = transf.transl(vec3.new(0.0, offset, 0.0))
+		
+		local height = 75
+		
+		local terrainFaces = { }
+		terrainFaces[#terrainFaces + 1] = { {size, -size, 0}, {size, size, 0}, {-size, size, 0}, {-size, -size, 0}, }
+		result.groundFaces = { }	
+		result.models = { }
+		result.colliders = {
+			{ 
+				type = "BOX",
+				transf = transf.transl(vec3.new(0.0, 0.0, height)),
+				params = {
+					halfExtents = {size, size, height},
+				}
+			}
+		}
+
+		if(params and params.size) then	-- Yeol, added check
+			if params.size >= 5 then
+				result.models = { {
+					id = "headquarter/headquarter_era_c_05.mdl",
+					transf = modelTransf,
+				} }
+				fillKey = "headquarter_era_c_05.lua"
+			elseif params.size >= 4 then
+				result.models = { {
+					id = "headquarter/headquarter_era_b_04.mdl",
+					transf = modelTransf,
+				} }
+				fillKey = "headquarter_era_b_04.lua"
+			elseif params.size >= 3 then
+				result.models = { {
+					id = "headquarter/headquarter_era_b_03.mdl",
+					transf = modelTransf,
+				} }
+				fillKey = "headquarter_era_b_03.lua"
+			elseif params.size >= 2 then
+				result.models = { {
+					id = "headquarter/headquarter_era_a_02.mdl",
+					transf = modelTransf,
+				} }
+				fillKey = "headquarter_era_a_02.lua"
+			else
+				result.models = { {
+					id = "headquarter/headquarter_era_a_01.mdl",
+					transf = modelTransf,
+				} }
+				fillKey = "headquarter_era_a_01.lua"
+			end
+		else	-- Yeol
+			result.models = { {
+				id = "headquarter/headquarter_era_a_01.mdl",
+				transf = modelTransf,
+			} }
+			fillKey = "headquarter_era_a_01.lua"
+		end		-- Yeol
+		
+		table.insert(result.groundFaces, {
+			face = { {size, -size}, {size, size}, {-size, size}, {-size, -size} },
+			modes = {
+				{ type = "FILL", key = fillKey },
+				{ type = "STROKE", key = "headquarter_border.lua" }
+			},
+		})
+
+		result.terrainAlignmentLists = {
+			{
+				type = "EQUAL",
+				faces = terrainFaces,
+				slopeLow = .35
+			}
+		}
+		
+		--Yeol
+		local edges = { }
+		edges[#edges + 1] = { { 0.0, -20.0,  0.0 },  { 00.0, 20.0, 0.00 } }
+		edges[#edges + 1] = { { 0.0,  0.0,  0.0 },  { 00.0, 20.0, 0.00 } }
+		result.edgeLists = {
+			{
+				type = "STREET",
+				params = { type = "standard/country_small_old.lua" },
+				edges = edges,
+				snapNodes = { 0 }
+			}
+		}
+		
+		local paperCapacity = 1
+		local workerCapacity = 10
+		if (params and params.size and (params.size>0)) then
+			paperCapacity = 4*params.size*params.size
+			workerCapacity = 10 + 10*params.size 
+		end
+		result.stocks = { }
+		constructionutil.makeStocks({
+			stocks = {
+				{ cargoType = "PAPER", type = "RECEIVING", sizex = 1, sizey = 1, x = 0, y = 0 },
+				{ cargoType = "MAIL", type = "RECEIVING", sizex = 1, sizey = 1, x = 1, y = 0 },
+			},
+			rule = { input = { { 1,0 },{0,1} }, output = { UNSORTED_MAIL=1 }, capacity = paperCapacity }
+		}, result)
+		
+		result.personCapacity = {
+			type = "COMMERCIAL",
+			capacity = workerCapacity,
+			}
+			
+		result.cost = 55555 -- building the HQ was far too cheap (2K) !
+		--Yeol
+		return result
+	end
+}
+
+end

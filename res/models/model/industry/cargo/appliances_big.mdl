@@ -1,0 +1,48 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 5.0014352798462, 1.873584985733, 2.4794707298279, },
+		bbMin = { -4.7742838859558, -2.0169253349304, -4.9138861868414e-07, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 4.8878593444824, 1.9452551603317, 1.2397356033325, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/Pallet.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_palletsBigApp_lod0.msh",
+						name = "jay_mesh_palletsBigApp",
+						transf = { 0.0099999997764826, 0, 0, 0, 0, -1.6292066584711e-09, 0.0099999997764826, 0, 0, -0.0099999997764826, -1.6292066584711e-09, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/appliances.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_applianceBig_lod0.msh",
+						name = "jay_mesh_appliancesBig",
+						transf = { 6.5835443763262e-08, -0.87201690673828, 0, 0, 0.87201690673828, 6.5835443763262e-08, 0, 0, 0, 0, 0.87201690673828, 0, -3.8585240840912, 0.96829068660736, 1.0626007318497, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/appliancesBox.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_simpleBoxApp_lod0.msh",
+						name = "jay_mesh_simpleBoxApp",
+						transf = { 0.0082709090784192, 0, 0, 0, 0, -1.918599279449e-09, 0.011776277795434, 0, 0, -0.0082709090784192, -1.3475021098941e-09, 0, -3.8647723197937, -1.0125157833099, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 444.08102416992,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

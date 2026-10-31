@@ -1,0 +1,36 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 0.90363311767578, 0.93373775482178, 1.8044462203979, },
+		bbMin = { -0.96517157554626, -0.93991237878799, -1.4647876867002e-07, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 0.93440234661102, 0.93682503700256, 0.90222316980362, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/wool.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_simpleBox_lod0.msh",
+						name = "jay_mesh_simpleBox",
+						transf = { 0.82709091901779, 0, 0, 0, 0, 0.82709091901779, 0, 0, 0, 0, 0.82709091901779, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 446.47937011719,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

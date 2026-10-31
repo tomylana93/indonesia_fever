@@ -1,0 +1,104 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 4.8811798095703, 1.7872428894043, 1.7083909511566, },
+		bbMin = { -4.8925585746765, -1.7910041809082, -0.050370000302792, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 4.886869430542, 1.7891235351563, 0.87938046455383, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						children = {
+										{
+											materials = { "asset/ground/asset_ground_containers_1.mtl", },
+											mesh = "asset/ground/lod_0_big_steel_container1.msh",
+											transf = { -4.3711388286738e-08, 1, 0, 0, -1, -4.3711388286738e-08, 3.2162449812177e-16, 0, 3.2162449812177e-16, 1.405865306796e-23, 1, 0, 0.7, 0, 0, 1, },
+										},
+										{
+											materials = { "asset/ground/asset_ground_containers_1.mtl", },
+											mesh = "asset/ground/lod_0_big_steel_container1_content.msh",
+											transf = { -4.3711388286738e-08, 1, 0, 0, -1, -4.3711388286738e-08, 3.2162449812177e-16, 0, 3.2162449812177e-16, 1.405865306796e-23, 1, 0, 0.7, 0, 0, 1, },
+										},
+									},
+						
+						name = "waste_big",
+						transf = { 1.45, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1, 0, -1, 0, 0, 1, },
+					},
+					
+					--tests{
+					--	children = {
+					--					{
+					--						materials = { "industry/cargo/cargo_items_04.mtl", },
+					--						mesh = "industry/cargo/pallet_lod0.msh",
+					--						name = "pallet",
+					--						transf = { 0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1, 0, -4, -0.85, 0, 1, },
+					--					},
+					--					{
+					--						materials = { "industry/cargo/cargo_items_04.mtl", },
+					--						mesh = "industry/cargo/pallet_lod0.msh",
+					--						name = "pallet",
+					--						transf = { 0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1, 0, -4, 0.85, 0, 1, },
+					--					},
+					--					
+					--					{
+					--						materials = { "asset/ground/asset_ground_containers_1.mtl", },
+					--						mesh = "asset/ground/lod_0_waste_container3.msh",
+					--						transf = { 0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, -4, 0, 0, 1, },
+					--					},
+					--					
+					--					{
+					--						materials = { "asset/ground/asset_ground_containers_1.mtl", },
+					--						mesh = "asset/ground/lod_0_hexagon_container1.msh",
+					--						transf = { 0.7, 0, 0, 0, 0, 0.7, 0, 0, 0, 0, 1, 0, -4, 0, 0, 1, },
+					--					},
+					--					
+					--					{
+					--						materials = { "asset/ground/asset_ground_containers_1.mtl", },
+					--						mesh = "asset/ground/lod_0_small_steel_container1.msh",
+					--						transf = { 0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, -3.6, -1, 0, 1, },
+					--					},
+					--					{
+					--						materials = { "asset/ground/asset_ground_containers_1.mtl", },
+					--						mesh = "asset/ground/lod_0_small_steel_container1_content.msh",
+					--						transf = { 0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, -3.6, -1, 0, 1, },
+					--					},
+					--					
+					--					{
+					--						materials = { "asset/ground/asset_ground_containers_1.mtl", },
+					--						mesh = "asset/ground/lod_0_small_steel_container1.msh",
+					--						transf = { 0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, -4.6, -1, 0, 1, },
+					--					},
+					--					{
+					--						materials = { "asset/ground/asset_ground_containers_1.mtl", },
+					--						mesh = "asset/ground/lod_0_small_steel_container1_content.msh",
+					--						transf = { 0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, -4.6, -1, 0, 1, },
+					--					},
+					--				},
+					--	
+					--		name = "waste_small",
+					--		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					--	},
+	
+					
+							},					
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 1100.3051757813,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

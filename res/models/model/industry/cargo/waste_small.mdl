@@ -1,0 +1,63 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 1, 0.97459411621094, 1.6809027194977, },
+		bbMin = { -1, -0.97459411621094, 0.0029170708730817, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 1, 0.97459411621094, 0.83899283409119, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						children = {
+										{
+											materials = { "industry/cargo/cargo_items_04.mtl", },
+											mesh = "industry/cargo/pallet_lod0.msh",
+											name = "pallet",
+											transf = { 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+										},
+										{
+											materials = { "asset/ground/asset_ground_containers_1.mtl", },
+											mesh = "asset/ground/lod_0_small_steel_container1.msh",
+											transf = { 0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, -0.5, 0.2, 0.2, 1, },
+										},
+										{
+											materials = { "asset/ground/asset_ground_containers_1.mtl", },
+											mesh = "asset/ground/lod_0_big_steel_container1_content.msh",
+											transf = { 0.32, 0, 0, 0, 0, 0.229, 0, 0, 0, 0, 1, 0, -0.5, 0.182, -0.38, 1, },
+										},
+										{
+											materials = { "asset/ground/asset_ground_containers_1.mtl", },
+											mesh = "asset/ground/lod_0_small_steel_container1.msh",
+											transf = { 0.90, -0.05, 0, 0, 0.05, 0.95, 0, 0, 0, 0, 1, 0, 0.5, -0.2, 0.2, 1, },
+										},
+										{
+											materials = { "asset/ground/asset_ground_containers_1.mtl", },
+											mesh = "asset/ground/lod_0_small_steel_container1_content.msh",
+											transf = { 0.90, -0.05, 0, 0, 0.05, 0.95, 0, 0, 0, 0, 1, 0, 0.5, -0.2, 0.2, 1, },
+										},
+
+						},
+						name = "cargo_slag",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 474.77325439453,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

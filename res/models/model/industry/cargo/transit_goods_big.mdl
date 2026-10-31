@@ -1,0 +1,71 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 4.9794960021973, 1.8596132993698, 1.84925365448, },
+		bbMin = { -4.6905903816223, -1.9334757328033, 0.19641959667206, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 0.93440234661102, 0.93682503700256, 0.90222316980362, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/transit.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_simpleBoxesBig_lod0.msh",
+						name = "jay_mesh_simpleBoxesBig",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/Pallet.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_palletsSideways_lod0.msh",
+						name = "jay_mesh_palletsSideways",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/newBags.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_bags_lod0.msh",
+						name = "jay_mesh_bags",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 180.47937011719,
+		},
+				{
+			node = {
+				children = {
+					{
+						materials = { "industry/cargo/cargo/transit.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_simpleBoxesBig_lod0.msh",
+						name = "jay_mesh_simpleBoxesBig",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "industry/cargo/cargo/Pallet.mtl", },
+						mesh = "industry/cargo/cargo/jay_mesh_palletsSideways_lod0.msh",
+						name = "jay_mesh_palletsSideways",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 180.47937011719,
+			visibleTo = 446.47937011719,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

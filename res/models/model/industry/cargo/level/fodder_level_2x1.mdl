@@ -1,0 +1,41 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 1.6849999427795, 1.1000000238419, 0.30000001192093, },
+		bbMin = { -1.6849999427795, -1.1000000238419, 0, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "industry/farm/hay_001.mtl", },
+						mesh = "industry/farm/hay_pile/hay_pile_lod0.msh",
+						transf = {0, 0.55, 0, 0, -0, 0, -0.25, 0, 1.3, -0, -0, 0, 0, 0, 0, 1, },
+					},
+					
+					{
+						materials = { "industry/farm/hay_001.mtl", },
+						mesh = "industry/farm/hay_cube/hay_cube_lod0.msh",
+						name = "hay_cube",
+						transf = {0, 1.75, 0, 0, -2.2, 0, 0, 0, 0, 0, 0.2, 0, 0, 0, -0.05, 1, },
+					},
+										
+				},
+				transf = { 0.55, 0, 0, 0, 0, 0.85, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 790,
+		},
+
+	},
+	metadata = { },
+	version = 1,
+}
+end
